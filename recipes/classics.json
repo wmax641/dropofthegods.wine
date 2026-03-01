@@ -2,7 +2,7 @@
   {
     "name": "Armaretto Sour",
     "style": "Sour",
-    "base": "Liqueur",
+    "base": "Other",
     "category": "Classics",
     "ingredients": [
       { "amount": 45,   "unit": "mL", "ingredient": "amaretto" },
@@ -14,7 +14,6 @@
     "method": ["shake", "double strain"],
     "notes": "Morgenthaler's amaretto sour"
   },
-
   {
     "name": "Brandy Alexander",
     "style": "Alexander",
@@ -28,7 +27,19 @@
     ],
     "method": ["shake", "double strain"]
   },
-
+  {
+    "name": "Chrysanthemum",
+    "style": "Martini",
+    "base": "Other",
+    "category": "Classics",
+    "img": "images/chrysanthemum.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL", "ingredient": "dry vermouth" },
+      { "amount": 15,   "unit": "mL", "type": "DOM Benedictine", "ingredient": "" },
+      { "amount": 2.5,  "unit": "mL", "ingredient": "absinthe" }
+    ],
+    "method": ["stir", "express orange🍊 peel"]
+  },
   {
     "name": "Manhattan",
     "style": "Martini",
@@ -42,7 +53,6 @@
     ],
     "method": ["stir", "express orange🍊 peel"]
   },
-
   {
     "name": "Margarita",
     "style": "Sidecar",
@@ -56,6 +66,25 @@
     ],
     "method": [
       "thin salt rim"
+    ]
+  },
+  {
+    "name": "Margarita (preferred)",
+    "style": "Sour",
+    "base": "Tequila",
+    "category": "Classics",
+    "img": "images/margarita.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 10,   "unit": "mL", "ingredient": "agave nectar" },
+      { "amount": 25,   "unit": "mL", "ingredient": "lime juice" },
+      "orange peel"
+    ],
+    "method": [
+      "regal shake with orange peel",
+      "thin salt rim",
+      "express orange🍊 peel",
+      "(if using Monin Agave Syrup, use about 15mL)"
     ]
   }
 ]

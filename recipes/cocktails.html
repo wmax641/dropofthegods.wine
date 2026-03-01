@@ -676,9 +676,22 @@
       `;
     }
 
-    function getUniqueValues(recipes, key) {
+    function isOtherValue(value) {
+      return String(value).trim().toLowerCase() === "other";
+    }
+
+    function getUniqueValues(recipes, key, options = {}) {
+      const { otherLast = false } = options;
       return [...new Set(recipes.map((recipe) => recipe[key]).filter(Boolean))]
-        .sort((a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: "base" }));
+        .sort((a, b) => {
+          if (otherLast) {
+            const aIsOther = isOtherValue(a);
+            const bIsOther = isOtherValue(b);
+            if (aIsOther && !bIsOther) return 1;
+            if (!aIsOther && bIsOther) return -1;
+          }
+          return String(a).localeCompare(String(b), undefined, { sensitivity: "base" });
+        });
     }
 
     const FILTER_HELP_TEXT = {
@@ -716,7 +729,7 @@
     function renderFilters(recipes) {
       filtersContent.innerHTML = [
         createFilterGroup("Style", "style", getUniqueValues(recipes, "style"), FILTER_HELP_TEXT.style),
-        createFilterGroup("Base", "base", getUniqueValues(recipes, "base"), FILTER_HELP_TEXT.base),
+        createFilterGroup("Base", "base", getUniqueValues(recipes, "base", { otherLast: true }), FILTER_HELP_TEXT.base),
         createFilterGroup("Category", "category", getUniqueValues(recipes, "category"), FILTER_HELP_TEXT.category)
       ].join("");
     }
@@ -761,7 +774,7 @@
             ${recipe.img ? "" : renderTitle(recipe)}
             <div class="chip-row">
               ${recipe.style ? `<span class="chip style-chip" tabindex="0" data-tooltip="The foundational cocktail class">${recipe.style}</span>` : ""}
-              ${recipe.base ? `<span class="chip base-chip" tabindex="0" data-tooltip="The primary base liqueur">${recipe.base}</span>` : ""}
+              ${recipe.base ? `<span class="chip base-chip" tabindex="0" data-tooltip="The primary base liquor">${recipe.base}</span>` : ""}
               ${recipe.category ? `<span class="chip category-chip" tabindex="0" data-tooltip="Category">${recipe.category}</span>` : ""}
             </div>
           </div>

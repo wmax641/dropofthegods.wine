@@ -18,7 +18,6 @@
     ],
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
-
   {
     "name": "Macunaima",
     "style": "Sour",
@@ -34,27 +33,23 @@
     "method": ["shake"],
     "notes": "Concept originally by Arnaldo Hirai from bar 'Boca de Ouro', Brazil"
   },
-
   {
-    "name": "Margarita (preferred)",
+    "name": "Margarita (Orange)",
     "style": "Sour",
     "base": "Tequila",
-    "category": "Classics",
-    "img": "images/margarita.jpg",
+    "category": "Riffs",
+    "img": "images/margarita_🍊.jpg",
     "ingredients": [
-      { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
-      { "amount": 10,   "unit": "mL", "ingredient": "agave nectar" },
-      { "amount": 25,   "unit": "mL", "ingredient": "lime juice" },
-      "orange peel"
+      { "amount": 45,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 30,   "unit": "mL", "ingredient": "orange juice" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 2.5,  "unit": "mL", "ingredient": "agave nectar" }
     ],
     "method": [
-      "regal shake with orange peel",
       "thin salt rim",
-      "express orange🍊 peel",
-      "(if using Monin Agave Syrup, use about 15mL)"
+      "(if using Monin Agave Syrup, use about 3mL)<br>(if using simple syrup, use about 5mL)"
     ]
   },
-
   {
     "name": "Tea Ceremony",
     "style": "Old-Fashioned",
