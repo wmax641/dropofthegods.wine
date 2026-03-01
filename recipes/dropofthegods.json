@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Coffee Negroni",
+    "style": "Martini",
+    "base": "Gin",
+    "category": "Drop of the Gods",
+    "img": "images/coffee_negroni.jpg",
+    "ingredients": [
+      { "amount": 30,   "unit": "mL", "ingredient": "Coffee infused Gin" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "Citrus infused Aperitivo" },
+      { "amount": 30,   "unit": "mL", "ingredient": "Antica Formula sweet vermouth" }
+    ],
+    "method": [
+      "<b>Coffee infused Gin</b><br>300mL Old Tom Gin, 13g Coffee Beans<br>Cold infuse 24 hours",
+      "<b>Citrus infused Aperitivo</b><br>150mL Campari, 100mL Amaro Montenegro<br>Citrus peel at 10% weight of aperitivo mix. Blanch peels twice to reduce bitterness<br>Sous Vide @55°C for 1 hour"
+    ]
+  },
+
+  {
+    "name": "Deconstructed Banana Colada",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Drop of the Gods",
+    "img": "images/banana_colada.jpg",
+    "ingredients": [
+      { "amount": 60,   "unit": "mL", "ingredient": "Fig Leaf infused Rum with Banana Oleo" },
+      { "amount": 20,   "unit": "mL", "ingredient": "Banana Cordial" },
+      "Salted coconut cloud float"
+    ],
+    "method": [
+      "<b>Fig Leaf Infused Rum</b><br>300mL Light Rum, 4 fig leaves, pinch of citric Acid<br>Room Temperature Infuse for 18-24 hours",
+      "<b>Banana Oleo</b><br>3 banana skins, 50g sugar, pinch of citric acid<br>Room temperature macerate for 18-24 hours",
+      "Combine Fig Leaf Infused Rum, Banana Oleo, Cinnamon, Nutmeg, Room Temperature Infuse for 1 hour<br>Filter with Coffee Filter",
+      "<b>Banana Juice Cordial</b><br>3 Bananas, Pinch of Citric Acid<br>Blend and clarify with Pectinex<br>Citric Acid @3% by weight",
+      "<b>Coconut Cloud Float</b><br>2:1 Coconut Milk : Thick Cream<br>Pinch of Salt<br>Vanilla Extract"
+    ],
+    "notes": "Concept originally from 'MOKU', Sydney - 'Ba-la-la' cocktail"
+  },
+
+  {
+    "name": "Fruitcake Manhattan",
+    "style": "Martini",
+    "base": "Brandy",
+    "category": "Drop of the Gods",
+    "img": "images/fruitcake_manhattan.jpg",
+    "ingredients": [
+      { "amount": 75,   "unit": "mL", "ingredient": "Candied Fruit infused Manhattan" },
+      { "amount": 15,   "unit": "mL", "ingredient": "Cake infused Vermouth" }
+    ],
+    "method": [
+      "<b>Candied Fruit Infused Manhattan</b><br>300mL Brandy<br>100mL Sweet Vermouth<br>50mL clearn unsweetened Apple Juice<br>150g Candied/Glace fruit (including glace citrus peel and cherries)<br>Cinnamon, Nutmeg, All Spice<br>Vanilla Extract",
+      "Sous Vide @55°C 1 hour<br>Clarify with Pectinex",
+      "<b>Cake infused Vermouth</b><br>50mL milk<br>20g Cake (plain short cake or fruit cake)<br>Blend, strain solids",
+      "3:1 ratio milk wash with Dry Vermouth and the cake-infused milk"
+    ]
+  },
+
+  {
+    "name": "Honeymoon Period",
+    "style": "Sour",
+    "base": "Gin",
+    "category": "Drop of the Gods",
+    "img": "images/honeymoon_period.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "type": "Roku", "ingredient": "gin" },
+      { "amount": 30,   "unit": "mL", "ingredient": "Lychee Passionfruit cordial" },
+      "Jasmine Milk Tea milk wash (3:1)",
+      "spritz with orange blossom water"
+    ],
+    "method": [
+      "<b>Lychee Passionfruit cordial</b><br>200mL Lychee juice, 50mL passionfruit juice (4:1 ratio)<br>Sugar @27.5% weight<br>Citric Acid @2% weight",
+      "<b>Jasmine Milk Tea</b><br>4g Jasmine Tea with 200mL Milk (20g team/ 1000mL milk)<br>Bring to boil, then turn off heat and soak for 5min",
+      "<b>Milk Wash</b><br>3:1 cocktail to milk Milk Wash",
+      "1mL Orange Blossom Water / 100mL resultant milk wash<br>spritz with orange blossom water as garnish"
+    ]
+  },
+
+  {
+    "name": "Mezcal Paloma",
+    "style": "Highball",
+    "base": "Tequila",
+    "category": "Drop of the Gods",
+    "img": "images/mezcal_paloma.jpg",
+    "ingredients": [
+      { "amount": 35,   "unit": "mL", "ingredient": "Mezcal" },
+      { "amount": 35,   "unit": "mL", "ingredient": "Citrus and Rosmary shrub" },
+      { "amount": 5,    "unit": "mL", "ingredient": "Lime Juice" },
+      "top up with Soda, about 1:1 ratio of cocktail:soda"
+    ],
+    "method": [
+      "<b>Citrus and Rosmary shrub</b><br>3:2:2 ratio of citrus, sugar, white wine vinegar<br>Rosemary",
+      "Oleo/macerate sugar, citrus peel and rosemary first for 1day<br>then add the other ingredients<br>Infuse for 3-5 more days"
+    ],
+    "notes": "Concept originally from 'Bar Flying Bumblebee', Tokyo"
+  },
+
+  {
+    "name": "Silk Jasmine",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Drop of the Gods",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "Pineapple Rum" },
+      { "amount": 30,   "unit": "mL", "ingredient": "Passionfruit Cordial" },
+      "4g chinese 5-spice powder / 1000mL cocktail mix",
+      "Jasmine Milk Tea milk wash (3:1)"
+    ],
+    "method": [
+      "<b>Pineapple Rum</b><br>300mL Dark Rum (ideally Planteray Pineapple Rum)<br>Sous Vide @55°C for 2 hours",
+      "<b>Passionfruit Cordial</b><br>175g Passionfruit Juice without seeds<br>52.5g Sugar (~30% by weight)<br>5g citric acid (~2.5% by weight)",
+      "<b>Jasmine Milk Tea</b><br>4g Jasmine Tea with 200mL Milk (20g team/ 1000mL milk)<br>Bring to boil, then turn off heat and soak for 5min",
+      "<b>Milk Wash</b></br>Infuse chinese 5 spice powder for > 12 hours<br>3:1 cocktail to milk Milk Wash"
+    ],
+    "notes": "Concept originally from 'Kahii', Sydney - 'Silk Jasmine' cocktail"
+  }
+
+]

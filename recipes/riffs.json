@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Banana Alexander",
+    "style": "Alexander",
+    "base": "Brandy",
+    "category": "Riffs",
+    "img": "images/banana_alexander.jpg",
+    "ingredients": [
+      { "amount": 25,   "unit": "mL", "ingredient": "brandy" },
+      { "amount": 25,   "unit": "mL", "ingredient": "creme de cacao" },
+      { "amount": 12.5, "unit": "mL", "ingredient": "milk" },
+      { "amount": 0.5,  "unit": "of a", "ingredient": "banana" },
+      { "amount": 1,    "unit": "spoon", "ingredient": "mascarpone" }
+    ],
+    "method": [
+      "Blend flesh of half a banana with the other ingredients",
+      "shake"
+    ],
+    "notes": "Concept originally from 'Bar FARO', Niigata"
+  },
+
+  {
+    "name": "Macunaima",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Riffs",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "cahacha" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 15,   "unit": "mL", "ingredient": "falernum" },
+      { "amount": 5,    "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 7.5,  "unit": "mL", "ingredient": "fernet branca" }
+    ],
+    "method": ["shake"],
+    "notes": "Concept originally by Arnaldo Hirai from bar 'Boca de Ouro', Brazil"
+  },
+
+  {
+    "name": "Margarita (preferred)",
+    "style": "Sour",
+    "base": "Tequila",
+    "category": "Classics",
+    "img": "images/margarita.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 10,   "unit": "mL", "ingredient": "agave nectar" },
+      { "amount": 25,   "unit": "mL", "ingredient": "lime juice" },
+      "orange peel"
+    ],
+    "method": [
+      "regal shake with orange peel",
+      "thin salt rim",
+      "express orange🍊 peel",
+      "(if using Monin Agave Syrup, use about 15mL)"
+    ]
+  },
+
+  {
+    "name": "Tea Ceremony",
+    "style": "Old-Fashioned",
+    "base": "Whisky",
+    "category": "Riffs",
+    "img" : "images/tea_ceremony.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "whisky" },
+      { "amount": 15,   "unit": "mL", "ingredient": "creme de cacao" },
+      { "amount": 30,  "unit": "mL", "ingredient": "coconut water matcha" }
+    ],
+    "method": [
+      "whisk matcha with warm coconut water",
+      "stir",
+      "float coconut water matcha"],
+    "notes": "Original cocktail by Takuma Watanabe from Martiny's, New York"
+  }
+]

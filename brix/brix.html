@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="brixApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>🧪 Brix Syrup Calculator 🍯</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      color: #ddd;
+      padding: 2rem;
+    }
+
+    h1.title {
+      font-size: 2rem;
+      color: rgb(233, 233, 233);
+      margin-bottom: 0.25rem;
+      text-align: center;
+    }
+
+    p.description {
+      font-size: 1rem;
+      color: rgb(233, 233, 233);
+      width: 600px;
+      text-align: left;
+    }
+
+    .calculator {
+      background: rgba(30, 30, 30, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      width: 600px;
+      display: flex;
+      gap: 3rem;
+      color: #ddd;
+      position: relative;
+    }
+
+    .inputs {
+      flex: 1.2;
+    }
+
+    .output {
+      flex: 1.5;
+      padding-left: 1rem;
+    }
+
+    /* Input side heading size and color */
+    .inputs h1 {
+      font-size: 1.5rem;
+      color: rgb(252, 144, 3);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Input labels color */
+    .inputs label {
+      color: rgb(252, 144, 3);
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    /* Output side heading */
+    .output h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: rgb(244, 244, 222);
+      text-align: center;
+    }
+
+    .output h2 {
+      color: rgb(244, 244, 222);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.25rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      background: #2c2c2c;
+      color: #eee;
+    }
+
+    #fruitSelect,
+    #syrupSelect {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.75rem;
+      margin-left: 1rem;
+      width: 85%;
+      display: block;
+      background: #2c2c2c;
+      color: #eee;
+    }
+
+    .error {
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .result-box {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: #222;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+      color: #ddd;
+    }
+
+    .na {
+      color: grey;
+    }
+
+    /* --- Responsive styles for mobile devices --- */
+    @media (max-width: 700px) {
+      body {
+        padding: 0.5rem;
+        box-sizing: border-box;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+      .calculator {
+        flex-direction: column;
+        width: 90vw;
+        min-width: unset;
+        max-width: 100vw;
+        padding: 1rem;
+        gap: 1.5rem;
+        box-sizing: border-box;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .inputs, .output {
+        padding: 0;
+        width: 95%;
+      }
+      .inputs h1, .output h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .output h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      h1.title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+      p.description {
+        width: 98vw;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        padding: 0 0.2rem;
+      }
+      input, select {
+        font-size: 1.08rem;
+        padding: 0.7rem;
+        line-height: 1.4;
+      }
+      #fruitSelect, #syrupSelect {
+        font-size: 0.95rem;
+        margin-left: 0;
+        width: 100%;
+        line-height: 1.4;
+      }
+      .result-box {
+        font-size: 1.15rem;
+        font-weight: 600;
+        padding: 1rem;
+        line-height: 1.5;
+      }
+      .inputs label {
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .error {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+    }
+
+    @media (min-width: 700px) {
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #121212, #1e1e1e);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        color: #ddd;
+        padding: 2rem;
+      }
+      h1.title {
+        font-size: 2rem;
+        color: rgb(233, 233, 233);
+        margin-bottom: 0.25rem;
+        text-align: center;
+      }
+      p.description {
+        font-size: 1rem;
+        color: rgb(233, 233, 233);
+        width: 600px;
+        text-align: left;
+      }
+      .calculator {
+        background: rgba(30, 30, 30, 0.85);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        width: 600px;
+        display: flex;
+        gap: 3rem;
+        color: #ddd;
+        position: relative;
+      }
+      .inputs {
+        flex: 1.2;
+      }
+      .output {
+        flex: 1.5;
+        padding-left: 1rem;
+      }
+      .inputs h1 {
+        font-size: 1.5rem;
+        color: rgb(252, 144, 3);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .inputs label {
+        color: rgb(252, 144, 3);
+        font-weight: 600;
+        margin-top: 1rem;
+        display: block;
+      }
+      .output h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: rgb(244, 244, 222);
+        text-align: center;
+      }
+      .output h2 {
+        color: rgb(244, 244, 222);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.25rem;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        background: #2c2c2c;
+        color: #eee;
+      }
+      #fruitSelect,
+      #syrupSelect {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.75rem;
+        margin-left: 1rem;
+        width: 85%;
+        display: block;
+        background: #2c2c2c;
+        color: #eee;
+      }
+      .error {
+        color: #ff6b6b;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+      }
+      .result-box {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #222;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+        color: #ddd;
+      }
+      .na {
+        color: grey;
+      }
+    }
+  </style>
+</head>
+<body ng-controller="BrixController">
+  <nav style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+    <a href="./brix.html" style="color: #1a120c; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; background: linear-gradient(135deg, rgb(252, 144, 3), rgb(255, 196, 115)); font-weight: 700;">Brix Calculator</a>
+    <a href="../recipes/cocktails.html" style="color: #ddd; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.04);">Cocktail Recipes</a>
+  </nav>
+  <h1 class="title">🧪 Brix Syrup Calculator 🍯</h1>
+  <p class="description">
+    Tool for Mixologists to calculate the amount of additional sugar required to adjust a liquid/solution to a desired Brix value
+  </p>
+  <p class="description">
+    Simply fill in <span style="color: rgb(252,144,3)">the Input values on the left</span>, and then the Result on the right will indicate how much sugar to add
+  </p>
+
+  <form name="brixForm" novalidate>
+    <div class="calculator">
+      <div class="inputs">
+        <h1>Input Values</h1>
+
+        <label for="initialBrix">Initial Brix (°Bx)</label>
+        <input
+          type="number"
+          id="initialBrix"
+          name="initialBrix"
+          ng-model="initialBrix"
+          min="0"
+          max="99"
+          step="any"
+          required
+          ng-change="onInitialBrixChange()"
+        />
+        <div class="error" ng-show="brixForm.initialBrix.$invalid">
+          Must be a number ≥ 0, and < 100
+        </div>
+        <div class="error" ng-show="initialBrix > desiredBrix">
+          <b>Initial Brix</b> must be less than <b>Desired Brix</b>
+        </div>
+
+        <label for="fruitSelect" style="font-size: 0.9rem; margin-left: 1rem; margin-top: 0.5rem; color: rgb(222, 133, 3);">
+          Select Fruit Juice
+        </label>
+        <select id="fruitSelect" ng-model="selectedFruit" ng-change="updateInitialBrix()">
+          <option value="Custom">Custom</option>
+          <option ng-repeat="(fruit, range) in sortedFruits" value="{{fruit}}">
+            {{fruit}} <em>({{range.min}}–{{range.max}})</em>
+          </option>
+        </select>
+
+        <label for="desiredBrix">Desired Brix (°Bx)</label>
+        <input
+          type="number"
+          id="desiredBrix"
+          name="desiredBrix"
+          ng-model="desiredBrix"
+          min="0"
+          max="99"
+          step="any"
+          required
+        />
+        <div class="error" ng-show="brixForm.desiredBrix.$invalid">
+          Must be a number ≥ 0, and < 100
+        </div>
+
+        <label for="syrupSelect" style="font-size: 0.9rem; margin-left: 1rem; margin-top: 0.5rem; color: rgb(222, 133, 3);">
+          Select Syrup
+        </label>
+        <select id="syrupSelect" ng-model="selectedSyrup" ng-change="updateDesiredBrix()">
+          <option value="Custom">Custom</option>
+          <option value="Simple">Simple (1:1)</option>
+          <option value="Rich">Rich (2:1)</option>
+          <option value="Honey">Honey</option>
+        </select>
+
+        <label for="initialWeight">Initial Liquid Weight (g)</label>
+        <input
+          type="number"
+          id="initialWeight"
+          name="initialWeight"
+          ng-model="initialWeight"
+          min="0"
+          step="any"
+        />
+        <div class="error" ng-show="brixForm.initialWeight.$invalid">
+          Must be a number ≥ 0
+        </div>
+      </div>
+
+      <div class="output">
+        <h1>Result</h1>
+
+        <h2>Sugar Adjustment (g):</h2>
+        <div
+          class="result-box"
+          ng-class="{
+            na:
+              !(brixForm.initialBrix.$valid && brixForm.desiredBrix.$valid && brixForm.initialWeight.$valid)
+          }"
+        >
+          {{
+            brixForm.initialBrix.$valid &&
+            brixForm.desiredBrix.$valid &&
+            brixForm.initialBrix.$modelValue <= brixForm.desiredBrix.$modelValue &&
+            brixForm.initialWeight.$valid &&
+            initialWeight !== null &&
+            initialWeight !== undefined
+              ? '+' + (calculateTotalAdjustment() | number: 1) + ' g'
+              : 'N/A'
+          }}
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    angular.module('brixApp', []).controller('BrixController', ['$scope', function ($scope) {
+      $scope.initialBrix = 0;
+      $scope.desiredBrix = 50;
+      $scope.initialWeight = null;
+      $scope.selectedFruit = 'Custom';
+      $scope.selectedSyrup = 'Custom';
+
+      $scope.syrupValues = {
+        Custom: 50,
+        Simple: 50,
+        Rich: 66.6666669,
+        Honey: 75,
+      };
+
+      $scope.fruitBrixValues = {
+        Apple: { min: 10, max: 13 },
+        Cucumber: { min: 2, max: 5 },
+        Grapefruit: { min: 9, max: 10 },
+        Guava: { min: 7, max: 10 },
+        Lemon: { min: 4, max: 5 },
+        Lime: { min: 4, max: 5 },
+        Lychee: { min: 15, max: 20 },
+        Mango: {min: 13, max: 17},
+        Orange: { min: 11, max: 13 },
+        Passionfruit: { min: 12, max: 16 },
+        Pineapple: { min: 12, max: 16 },
+        Strawberry: { min: 7, max: 8 },
+        Watermelon: { min: 7, max: 8 },
+      };
+
+      $scope.sortedFruits = Object.entries($scope.fruitBrixValues)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .reduce((acc, [key, val]) => {
+          acc[key] = val;
+          return acc;
+        }, {});
+
+      $scope.updateDesiredBrix = function () {
+        if ($scope.selectedSyrup !== 'Custom') {
+          $scope.desiredBrix = $scope.syrupValues[$scope.selectedSyrup];
+        }
+      };
+
+      $scope.$watch('desiredBrix', function (newVal, oldVal) {
+        if ($scope.selectedSyrup !== 'Custom' && newVal !== $scope.syrupValues[$scope.selectedSyrup]) {
+          $scope.selectedSyrup = 'Custom';
+        }
+      });
+
+      $scope.updateInitialBrix = function () {
+        if ($scope.selectedFruit !== 'Custom' && $scope.fruitBrixValues[$scope.selectedFruit]) {
+          const range = $scope.fruitBrixValues[$scope.selectedFruit];
+          $scope.initialBrix = Math.round((range.min + range.max) / 2);
+        }
+      };
+
+      $scope.onInitialBrixChange = function () {
+        if ($scope.selectedFruit !== 'Custom') {
+          $scope.selectedFruit = 'Custom';
+        }
+      };
+
+      $scope.calculateTotalAdjustment = function () {
+        let Bi = $scope.initialBrix / 100;
+        let Bd = $scope.desiredBrix / 100;
+        let Wi = $scope.initialWeight;
+
+        if (Bd >= 1 || Wi === null || isNaN(Wi)) {
+          return NaN;
+        }
+
+        return Wi * (Bd - Bi) / (1 - Bd);
+      };
+    }]);
+  </script>
+</body>
+</html>
+<!–– Vibe coded in Chat GPT -->

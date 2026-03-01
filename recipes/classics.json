@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Armaretto Sour",
+    "style": "Sour",
+    "base": "Liqueur",
+    "category": "Classics",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "amaretto" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "bourbon" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 5,    "unit": "mL", "ingredient": "simple syrup" },
+      "egg white"
+    ],
+    "method": ["shake", "double strain"],
+    "notes": "Morgenthaler's amaretto sour"
+  },
+
+  {
+    "name": "Brandy Alexander",
+    "style": "Alexander",
+    "base": "Brandy",
+    "category": "Classics",
+    "img": "images/alexander.jpg",
+    "ingredients": [
+      { "amount": 25,   "unit": "mL", "ingredient": "brandy" },
+      { "amount": 25,   "unit": "mL", "ingredient": "creme de cacao" },
+      { "amount": 30,   "unit": "mL", "ingredient": "cream" }
+    ],
+    "method": ["shake", "double strain"]
+  },
+
+  {
+    "name": "Manhattan",
+    "style": "Martini",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/manhattan.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL", "type": "rye", "ingredient": "whisky" },
+      { "amount": 25,   "unit": "mL", "type": "Antica Formula","ingredient": "sweet vermouth" },
+      { "amount": 1,    "unit": "dash", "type": "Angostura", "ingredient": "bitters" }
+    ],
+    "method": ["stir", "express orange🍊 peel"]
+  },
+
+  {
+    "name": "Margarita",
+    "style": "Sidecar",
+    "base": "Tequila",
+    "category": "Classics",
+    "img": "images/margarita.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 22.5, "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "lime juice" }
+    ],
+    "method": [
+      "thin salt rim"
+    ]
+  }
+]
