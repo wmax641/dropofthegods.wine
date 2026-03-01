@@ -23,6 +23,7 @@
     "style": "Sour",
     "base": "Rum",
     "category": "Riffs",
+    "img": "images/macunaima.jpg",
     "ingredients": [
       { "amount": 45,   "unit": "mL", "ingredient": "cahacha" },
       { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
@@ -40,7 +41,7 @@
     "category": "Riffs",
     "img": "images/margarita_🍊.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
       { "amount": 30,   "unit": "mL", "ingredient": "orange juice" },
       { "amount": 15,   "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 2.5,  "unit": "mL", "ingredient": "agave nectar" }
@@ -48,6 +49,24 @@
     "method": [
       "thin salt rim",
       "(if using Monin Agave Syrup, use about 3mL)<br>(if using simple syrup, use about 5mL)"
+    ]
+  },
+  {
+    "name": "Negroni Sbagliato",
+    "style": "Martini",
+    "base": "Other",
+    "category": "Riffs",
+    "img": "images/negroni_sbagliato.jpg",
+    "ingredients": [
+      { "amount": 25,   "unit": "mL", "type": "Campari", "ingredient": "bitter aperitivo" },
+      { "amount": 25,   "unit": "mL", "ingredient": "sweet vermouth" },
+      { "amount": 7.5,  "unit": "mL", "ingredient": "gin" },
+      { "amount": 60,   "unit": "mL", "ingredient": "dry sparkling wine" }
+    ],
+    "method": [
+      "stir spirits",
+      "express orange🍊 peel",
+      "add sparkling wine afterwards"
     ]
   },
   {
