@@ -141,6 +141,7 @@
       background: #fff;
       color: #111;
       line-height: 1;
+      transition: transform 0.2s ease;
     }
 
     .filter-label {
@@ -535,7 +536,7 @@
       box-shadow: 0 18px 45px var(--shadow);
     }
 
-    @media (max-width: 639px) {
+    @media (max-width: 640px) {
       body {
         padding: 1rem 0.8rem 2rem;
       }
@@ -552,8 +553,23 @@
         display: flex;
       }
 
+      .filters-content {
+        overflow: hidden;
+        max-height: 38rem;
+        opacity: 1;
+        transform: translateY(0);
+        transition: max-height 0.22s ease, opacity 0.18s ease, transform 0.18s ease;
+      }
+
       .filters.is-collapsed .filters-content {
-        display: none;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-0.35rem);
+        pointer-events: none;
+      }
+
+      .filters.is-collapsed .filters-toggle-icon {
+        transform: rotate(-180deg);
       }
 
       .filter-line {
@@ -585,7 +601,7 @@
 
     }
 
-    @media (min-width: 640px) and (max-width: 899px) {
+    @media (min-width: 641px) and (max-width: 899px) {
       .image-wrap {
         width: 100%;
       }
@@ -630,13 +646,15 @@
     const filtersContent = document.getElementById("filtersContent");
     const filtersToggle = document.getElementById("filtersToggle");
     const recipeGrid = document.getElementById("recipeGrid");
-    const mobileFiltersQuery = window.matchMedia("(max-width: 639px)");
+    const mobileFiltersQuery = window.matchMedia("(max-width: 640px)");
     const filterState = {
       style: null,
       base: null,
       category: null
     };
     let allRecipes = [];
+    let autoCollapseArmed = true;
+    let autoCollapseArmTimer = null;
 
     function formatAmount(value) {
       return Number.isInteger(value) ? String(value) : String(value).replace(/\.0$/, "");
@@ -737,7 +755,17 @@
     function setFiltersCollapsed(isCollapsed) {
       filtersRoot.classList.toggle("is-collapsed", isCollapsed);
       filtersToggle.setAttribute("aria-expanded", String(!isCollapsed));
-      filtersToggle.querySelector(".filters-toggle-icon").textContent = isCollapsed ? "▼" : "△";
+      filtersToggle.querySelector(".filters-toggle-icon").textContent = "▾";
+    }
+
+    function armMobileAutoCollapse(delayMs = 180) {
+      autoCollapseArmed = false;
+      if (autoCollapseArmTimer) {
+        clearTimeout(autoCollapseArmTimer);
+      }
+      autoCollapseArmTimer = window.setTimeout(() => {
+        autoCollapseArmed = true;
+      }, delayMs);
     }
 
     function syncFiltersForViewport() {
@@ -746,6 +774,19 @@
         return;
       }
       setFiltersCollapsed(false);
+    }
+
+    function collapseMobileFiltersOnScroll() {
+      if (!mobileFiltersQuery.matches) {
+        return;
+      }
+      if (!autoCollapseArmed) {
+        return;
+      }
+      if (filtersRoot.classList.contains("is-collapsed")) {
+        return;
+      }
+      setFiltersCollapsed(true);
     }
 
     function getFilteredRecipes() {
@@ -809,9 +850,13 @@
     filtersToggle.addEventListener("click", () => {
       const isCollapsed = filtersRoot.classList.contains("is-collapsed");
       setFiltersCollapsed(!isCollapsed);
+      if (isCollapsed && mobileFiltersQuery.matches) {
+        armMobileAutoCollapse();
+      }
     });
 
     mobileFiltersQuery.addEventListener("change", syncFiltersForViewport);
+    window.addEventListener("scroll", collapseMobileFiltersOnScroll, { passive: true });
     syncFiltersForViewport();
 
     const RECIPE_SOURCES = ["./classics.json", "./dropofthegods.json", "./riffs.json"];
