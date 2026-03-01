@@ -28,7 +28,7 @@
       { "amount": 45,   "unit": "mL", "ingredient": "cahacha" },
       { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 15,   "unit": "mL", "ingredient": "falernum" },
-      { "amount": 5,    "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 7.5,  "unit": "mL", "ingredient": "simple syrup" },
       { "amount": 7.5,  "unit": "mL", "ingredient": "fernet branca" }
     ],
     "method": ["shake"],
