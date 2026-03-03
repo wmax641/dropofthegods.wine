@@ -48,7 +48,7 @@
       { "amount": 15,   "unit": "mL", "ingredient": "Cake infused Vermouth" }
     ],
     "method": [
-      "<b>Candied Fruit Infused Manhattan</b><br>300mL Brandy<br>100mL Sweet Vermouth<br>50mL clearn unsweetened Apple Juice<br>150g Candied/Glace fruit (including glace citrus peel and cherries)<br>Cinnamon, Nutmeg, All Spice<br>Vanilla Extract",
+      "<b>Candied Fruit Infused Manhattan</b><br>300mL Brandy<br>100mL Sweet Vermouth<br>50mL clear unsweetened Apple Juice<br>150g Candied/Glace fruit (including glace citrus peel and cherries)<br>Cinnamon, Nutmeg, All Spice<br>Vanilla Extract",
       "Sous Vide @55°C 1 hour<br>Clarify with Pectinex",
       "<b>Cake infused Vermouth</b><br>50mL milk<br>20g Cake (plain short cake or fruit cake)<br>Blend, strain solids",
       "3:1 ratio milk wash with Dry Vermouth and the cake-infused milk"
@@ -72,6 +72,25 @@
       "<b>Jasmine Milk Tea</b><br>4g Jasmine Tea with 200mL Milk (20g team/ 1000mL milk)<br>Bring to boil, then turn off heat and soak for 5min",
       "<b>Milk Wash</b><br>3:1 cocktail to milk Milk Wash",
       "1mL Orange Blossom Water / 100mL resultant milk wash<br>spritz with orange blossom water as garnish"
+    ]
+  },
+
+  {
+    "name": "Kyoto Mule",
+    "style": "Highball",
+    "base": "Other",
+    "category": "Drop of the Gods",
+    "img": "images/kyoto_mule.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "umeshu" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "matcha" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 120,   "unit": "mL", "ingredient": "ginger beer" }
+    ],
+    "method": [
+      "build",
+      "float matcha on top",
+      "large variance in sweetness of umeshu and ginger beer/ale. Adjust as required, or replace some ginger beer/ale with soda"
     ]
   },
 

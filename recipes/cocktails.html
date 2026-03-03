@@ -306,22 +306,26 @@
     }
 
     .card {
+      --card-pad-top: 1.1rem;
+      --card-pad-x: 1.4rem;
+      --card-pad-bottom: 1.4rem;
       background: var(--panel);
       border: 1px solid var(--panel-border);
       border-radius: 1.4rem;
-      padding: 1.1rem 1.4rem 1.4rem;
+      padding: var(--card-pad-top) var(--card-pad-x) var(--card-pad-bottom);
       box-shadow: 0 18px 45px var(--shadow);
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      overflow: hidden;
     }
 
     .image-wrap {
       position: relative;
-      width: 85%;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 1rem;
+      width: calc(100% + (var(--card-pad-x) * 2));
+      margin: calc(var(--card-pad-top) * -1) calc(var(--card-pad-x) * -1) 0;
+      background: var(--panel);
+      border-radius: 0;
       overflow: hidden;
     }
 
@@ -329,9 +333,9 @@
       width: 100%;
       aspect-ratio: 5 / 4;
       object-fit: cover;
-      border-radius: 1rem;
+      border-radius: 0;
       background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 0;
       display: block;
     }
 
@@ -340,10 +344,13 @@
       left: 0;
       right: 0;
       bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
       margin: 0;
-      padding: 4.0rem 1rem 1rem;
-      border-radius: 0 0 1rem 1rem;
-      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0));
+      padding: 5.0rem 1rem 1rem;
+      border-radius: 0;
+      background: linear-gradient(to top, rgba(25, 18, 14, 1), rgba(25, 18, 14, 0));
       font-size: 1.8rem;
       line-height: 1.1;
     }
@@ -361,9 +368,10 @@
     }
 
     .card-header {
+      position: relative;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.4rem;
     }
 
     .card h2 {
@@ -427,7 +435,9 @@
     }
 
     .chip {
-      position: relative;
+      position: static;
+      display: inline-flex;
+      align-items: center;
       white-space: nowrap;
       border-radius: 999px;
       padding: 0.35rem 0.7rem;
@@ -438,12 +448,11 @@
       cursor: help;
     }
 
-    .chip::after {
-      content: attr(data-tooltip);
+    .chip-tooltip {
       position: absolute;
-      left: 50%;
+      left: 0;
       bottom: calc(100% + 0.65rem);
-      transform: translateX(-50%) translateY(0.2rem);
+      transform: translateY(0.2rem);
       min-width: 150px;
       max-width: 220px;
       padding: 0.55rem 0.7rem;
@@ -462,12 +471,11 @@
       z-index: 2;
     }
 
-    .chip::before {
-      content: "";
+    .chip-tooltip-arrow {
       position: absolute;
-      left: 50%;
+      left: 0.45rem;
       bottom: calc(100% + 0.3rem);
-      transform: translateX(-50%) translateY(0.2rem);
+      transform: translateY(0.2rem);
       border-width: 0.35rem;
       border-style: solid;
       border-color: rgba(8, 8, 8, 0.92) transparent transparent transparent;
@@ -477,12 +485,12 @@
       z-index: 2;
     }
 
-    .chip:hover::after,
-    .chip:hover::before,
-    .chip:focus-visible::after,
-    .chip:focus-visible::before {
+    .chip:hover .chip-tooltip,
+    .chip:hover .chip-tooltip-arrow,
+    .chip:focus-visible .chip-tooltip,
+    .chip:focus-visible .chip-tooltip-arrow {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0);
     }
 
     .style-chip {
@@ -584,16 +592,15 @@
 
       .hero,
       .card {
-        padding: 0.8rem 1.1rem 1.1rem;
+        --card-pad-top: 0.8rem;
+        --card-pad-x: 1.1rem;
+        --card-pad-bottom: 1.1rem;
+        padding: var(--card-pad-top) var(--card-pad-x) var(--card-pad-bottom);
       }
 
       .image-wrap {
-        position: relative;
-        width: 85%;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 1rem;
-        overflow: hidden;
+        width: calc(100% + (var(--card-pad-x) * 2));
+        margin: calc(var(--card-pad-top) * -1) calc(var(--card-pad-x) * -1) 0;
       }
       .card-header {
         flex-direction: column;
@@ -602,9 +609,6 @@
     }
 
     @media (min-width: 641px) and (max-width: 899px) {
-      .image-wrap {
-        width: 100%;
-      }
       .card h2 {
         margin: 0;
         font-size: 1.3rem;
@@ -692,6 +696,34 @@
           ${recipe.notes ? `<span class="title-note-tooltip" role="tooltip">${recipe.notes}</span><span class="title-note-arrow" aria-hidden="true"></span>` : ""}
         </div>
       `;
+    }
+
+    function renderChip(value, className, tooltip) {
+      if (!value) {
+        return "";
+      }
+
+      return `
+        <span class="chip ${className}" tabindex="0">
+          ${value}
+          <span class="chip-tooltip" role="tooltip">${tooltip}</span>
+          <span class="chip-tooltip-arrow" aria-hidden="true"></span>
+        </span>
+      `;
+    }
+
+    function renderChipRow(recipe) {
+      const chips = [
+        renderChip(recipe.style, "style-chip", "The foundational cocktail class"),
+        renderChip(recipe.base, "base-chip", "The primary base liquor"),
+        renderChip(recipe.category, "category-chip", "Category")
+      ].filter(Boolean).join("");
+
+      if (!chips) {
+        return "";
+      }
+
+      return `<div class="chip-row">${chips}</div>`;
     }
 
     function isOtherValue(value) {
@@ -808,17 +840,18 @@
           ${recipe.img ? `
             <div class="image-wrap">
               <img class="card-image" src="${recipe.img}" alt="${recipe.name}">
-              <div class="image-title">${renderTitle(recipe)}</div>
+              <div class="image-title">
+                ${renderTitle(recipe)}
+                ${renderChipRow(recipe)}
+              </div>
             </div>
           ` : ""}
-          <div class="card-header">
-            ${recipe.img ? "" : renderTitle(recipe)}
-            <div class="chip-row">
-              ${recipe.style ? `<span class="chip style-chip" tabindex="0" data-tooltip="The foundational cocktail class">${recipe.style}</span>` : ""}
-              ${recipe.base ? `<span class="chip base-chip" tabindex="0" data-tooltip="The primary base liquor">${recipe.base}</span>` : ""}
-              ${recipe.category ? `<span class="chip category-chip" tabindex="0" data-tooltip="Category">${recipe.category}</span>` : ""}
+          ${recipe.img ? "" : `
+            <div class="card-header">
+              ${renderTitle(recipe)}
+              ${renderChipRow(recipe)}
             </div>
-          </div>
+          `}
           <div>
             <span class="section-title">Ingredients</span>
             <ul>${recipe.ingredients.map((item) => `<li>${renderIngredient(item)}</li>`).join("")}</ul>

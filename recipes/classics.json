@@ -94,7 +94,7 @@
     "category": "Classics",
     "img": "images/sidecar.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "tequila" },
+      { "amount": 45,   "unit": "mL", "ingredient": "brandy" },
       { "amount": 22.5, "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
       { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 5 ,   "unit": "mL", "ingredient": "simple syrup" }
