@@ -41,24 +41,6 @@
     "method": ["stir", "express orange🍊 peel"]
   },
   {
-    "name": "Whisky Highball",
-    "style": "Highball",
-    "base": "Whisky",
-    "category": "Classics",
-    "img": "images/whisky_highball.jpg",
-    "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "whisky" },
-      { "amount": 90,   "unit": "mL", "ingredient": "soda water" }
-    ],
-    "method": [
-      "add whisky and half ice, stir",
-      "add the rest of the ice",
-      "add soda",
-      "using barspoon, smoothly lift ice up from bottom a few times to mix",
-      "(optional) exppress lemon🍋 zest"
-    ]
-  },
-  {
     "name": "Manhattan",
     "style": "Martini",
     "base": "Whisky",
@@ -121,6 +103,24 @@
       "shake with slice of orange🍊",
       "express orange🍊 peel",
       "(if using sugar rim, don't add sugar syrup)"
+    ]
+  },
+  {
+    "name": "Whisky Highball",
+    "style": "Highball",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/whisky_highball.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "whisky" },
+      { "amount": 90,   "unit": "mL", "ingredient": "soda water" }
+    ],
+    "method": [
+      "add whisky and half ice, stir",
+      "add the rest of the ice",
+      "add soda",
+      "using barspoon, smoothly lift ice up from bottom a few times to mix",
+      "(optional) express lemon🍋 zest"
     ]
   }
 ]
