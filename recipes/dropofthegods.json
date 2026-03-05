@@ -76,25 +76,6 @@
   },
 
   {
-    "name": "Kyoto Mule",
-    "style": "Highball",
-    "base": "Other",
-    "category": "Drop of the Gods",
-    "img": "images/kyoto_mule.jpg",
-    "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "umeshu" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "matcha" },
-      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
-      { "amount": 120,   "unit": "mL", "ingredient": "ginger beer" }
-    ],
-    "method": [
-      "build",
-      "float matcha on top",
-      "large variance in sweetness of umeshu and ginger beer/ale. Adjust as required, or replace some ginger beer/ale with soda"
-    ]
-  },
-
-  {
     "name": "Mezcal Paloma",
     "style": "Highball",
     "base": "Tequila",

@@ -19,6 +19,24 @@
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
   {
+    "name": "Kyoto Mule",
+    "style": "Highball",
+    "base": "Other",
+    "category": "Riffs",
+    "img": "images/kyoto_mule.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "umeshu" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "matcha🍵" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 120,   "unit": "mL", "ingredient": "ginger beer" }
+    ],
+    "method": [
+      "build",
+      "float matcha🍵 on top",
+      "large variance in sweetness of umeshu and ginger beer. Adjust as required, or replace some ginger beer with soda"
+    ]
+  },
+  {
     "name": "Macunaima",
     "style": "Sour",
     "base": "Rum",
@@ -83,7 +101,7 @@
     "method": [
       "whisk matcha with warm coconut water",
       "stir",
-      "float coconut water matcha"],
+      "float coconut water matcha🍵"],
     "notes": "Original cocktail by Takuma Watanabe from Martiny's, New York"
   }
 ]
