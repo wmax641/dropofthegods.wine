@@ -59,7 +59,7 @@
     "img": "images/negroni_sbagliato.jpg",
     "ingredients": [
       { "amount": 25,   "unit": "mL", "type": "Campari", "ingredient": "bitter aperitivo" },
-      { "amount": 25,   "unit": "mL", "ingredient": "sweet vermouth" },
+      { "amount": 25,   "unit": "mL", "type": "Antica Formula", "ingredient": "sweet vermouth" },
       { "amount": 7.5,  "unit": "mL", "ingredient": "gin" },
       { "amount": 60,   "unit": "mL", "ingredient": "dry sparkling wine" }
     ],

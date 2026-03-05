@@ -6,9 +6,9 @@
     "category": "Drop of the Gods",
     "img": "images/coffee_negroni.jpg",
     "ingredients": [
-      { "amount": 30,   "unit": "mL", "ingredient": "Coffee infused Gin" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "Citrus infused Aperitivo" },
-      { "amount": 30,   "unit": "mL", "ingredient": "Antica Formula sweet vermouth" }
+      { "amount": 30,   "unit": "mL", "type": "Coffee Infused", "ingredient": "gin" },
+      { "amount": 22.5, "unit": "mL", "type": "Citrus Infused", "ingredient": "bitter aperitivo" },
+      { "amount": 30,   "unit": "mL", "type": "Antica Formula", "ingredient": "sweet vermouth" }
     ],
     "method": [
       "<b>Coffee infused Gin</b><br>300mL Old Tom Gin, 13g Coffee Beans<br>Cold infuse 24 hours",
@@ -101,9 +101,9 @@
     "category": "Drop of the Gods",
     "img": "images/mezcal_paloma.jpg",
     "ingredients": [
-      { "amount": 35,   "unit": "mL", "ingredient": "Mezcal" },
+      { "amount": 35,   "unit": "mL", "ingredient": "mezcal" },
       { "amount": 35,   "unit": "mL", "ingredient": "Citrus and Rosmary shrub" },
-      { "amount": 5,    "unit": "mL", "ingredient": "Lime Juice" },
+      { "amount": 5,    "unit": "mL", "ingredient": "lime juice" },
       "top up with Soda, about 1:1 ratio of cocktail:soda"
     ],
     "method": [
