@@ -38,12 +38,30 @@
     }
 
     .panel {
-      width: min(700px, 100%);
+      width: min(550px, 100%);
       padding: 3rem;
       border-radius: 1.25rem;
-      border: 1px solid var(--card-border);
-      background: var(--card);
+      position: relative;
+      border: 0;
+      background: rgba(20, 13, 9, 0.2);
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+      pointer-events: none;
+    }
+
+    .panel > * {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -85,23 +103,23 @@
   <main class="panel">
     <h1>🍷 Drop of the Gods</h1>
     <nav class="links">
-      <a href="./recipes/cocktails.html">🍹 Copcktail Recipes</a>
+      <a href="./recipes/cocktails.html">🍹 Cocktail Recipes</a>
       <a href="./brix/brix.html">🧪 Brix Calculator</a>
     </nav>
   </main>
   <script>
     const backgroundImages = [
-      "./images/bar0.jpg",
-      "./images/bar1.jpg",
-      "./images/bar2.jpg",
-      "./images/bar3.jpg",
-      "./images/bar4.jpg",
-      "./images/bar5.jpg",
-      "./images/bar6.jpg"
+      ["./images/bar0.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar1.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar2.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar3.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar4.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar5.jpg", "placeholder-1", "placeholder-2"],
+      ["./images/bar6.jpg", "placeholder-1", "placeholder-2"]
     ];
 
     const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
-    document.body.style.setProperty("--bg-image", "url('" + randomImage + "')");
+    document.body.style.setProperty("--bg-image", "url('" + randomImage[0] + "')");
   </script>
 </body>
 </html>

@@ -65,6 +65,7 @@
       { "amount": 22.5, "unit": "mL", "ingredient": "lime juice" }
     ],
     "method": [
+      "shake",
       "thin salt rim"
     ]
   },

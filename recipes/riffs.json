@@ -19,6 +19,22 @@
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
   {
+    "name": "Elderflower Gimlet",
+    "style": "Sidecar",
+    "base": "Gin",
+    "category": "Riffs",
+    "img": "images/elderflower_gimlet.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "type": "Roku", "ingredient": "gin" },
+      { "amount": 15,   "unit": "mL", "type": "St Germain", "ingredient": "elderflower liqueur" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 5,    "unit": "mL", "ingredient": "simple syrup" }
+    ],
+    "method": [
+      "shake"
+    ]
+  },
+  {
     "name": "Kyoto Mule",
     "style": "Highball",
     "base": "Other",
