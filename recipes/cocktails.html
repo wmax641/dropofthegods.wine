@@ -55,6 +55,16 @@
       background: rgba(255, 255, 255, 0.04);
     }
 
+    .nav a.nav-main {
+      width: 2.4rem;
+      height: 2.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-radius: 50%;
+    }
+
     .nav a.active {
       background: linear-gradient(135deg, var(--accent), var(--accent-deep));
       color: #1a120c;
@@ -619,6 +629,7 @@
 <body>
   <main class="shell">
     <nav class="nav" aria-label="Site navigation">
+      <a href="../index.html" class="nav-main" aria-label="Main" title="Main">🩸</a>
       <a href="../brix/brix.html">🧪 Brix Calculator</a>
       <a href="./cocktails.html" class="active">🍹 Cocktail Recipes</a>
     </nav>
