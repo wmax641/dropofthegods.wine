@@ -20,21 +20,38 @@
     }
 
     body {
-      --bg-image: none;
       margin: 0;
       min-height: 100vh;
       display: grid;
-      place-items: center;
-      padding: 1.25rem;
+      justify-items: center;
+      align-content: start;
+      padding: clamp(12vh, 18vh, 30vh) 1.25rem 1.25rem;
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
       color: var(--text);
       background-color: #120b07;
+    }
+
+    .bg-layer {
+      --bg-photo: none;
+      position: fixed;
+      inset: 0;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-image:
         linear-gradient(135deg, rgba(67, 35, 5, 0.6), rgba(32, 24, 8, 0.9)),
-        var(--bg-image);
+        var(--bg-photo);
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 1200ms ease;
+    }
+
+    .bg-layer--a {
+      opacity: 1;
+    }
+
+    .bg-layer--b {
+      opacity: 0;
     }
 
     .panel {
@@ -45,6 +62,7 @@
       border: 0;
       background: rgba(20, 13, 9, 0.2);
       overflow: hidden;
+      z-index: 67;
     }
 
     .panel::before {
@@ -52,16 +70,16 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
-      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 53%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 53%, rgba(0, 0, 0, 0) 100%);
       pointer-events: none;
     }
 
     .panel > * {
       position: relative;
-      z-index: 1;
+      z-index: 67;
     }
 
     h1 {
@@ -96,10 +114,49 @@
     a:hover {
       transform: translateY(-2px);
       border-color: var(--accent);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .bg-caption {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 2.0rem 1.25rem 1.0rem;
+      background: linear-gradient(to top, rgba(8, 6, 5, 0.88) 0%, rgba(8, 6, 5, 0.62) 52%, rgba(8, 6, 5, 0) 100%);
+      pointer-events: auto;
+      user-select: text;
+      z-index: 2;
+    }
+
+    .bg-caption-inner {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+    }
+
+    .bg-caption h2,
+    .bg-caption p {
+      margin: 0;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .bg-caption h2 {
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .bg-caption p {
+      margin-top: 0.35rem;
+      color: var(--muted);
+      font-size: clamp(0.9rem, 1.6vw, 1.05rem);
     }
   </style>
 </head>
 <body>
+  <div class="bg-layer bg-layer--a" id="bg-layer-a" aria-hidden="true"></div>
+  <div class="bg-layer bg-layer--b" id="bg-layer-b" aria-hidden="true"></div>
   <main class="panel">
     <h1>🍷 Drop of the Gods</h1>
     <nav class="links">
@@ -107,19 +164,63 @@
       <a href="./brix/brix.html">🧪 Brix Calculator</a>
     </nav>
   </main>
+  <section class="bg-caption" aria-hidden="true">
+    <div class="bg-caption-inner">
+      <h2 id="bg-caption-line-1"></h2>
+      <p id="bg-caption-line-2"></p>
+    </div>
+  </section>
   <script>
     const backgroundImages = [
-      ["./images/bar0.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar1.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar2.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar3.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar4.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar5.jpg", "placeholder-1", "placeholder-2"],
-      ["./images/bar6.jpg", "placeholder-1", "placeholder-2"]
+      ["./images/bar0.jpg", "バー・ファロ (Bar FARO)", "Niigata, JAPAN"],
+      ["./images/bar1.jpg", "バー・ファロ (Bar FARO)", "Niigata, JAPAN"],
+      ["./images/bar2.jpg", "ベンフィディック (Bar Benfiddich)", "Tokyo, JAPAN"],
+      ["./images/bar3.jpg", "bar lente", "Kumamoto, JAPAN"],
+      ["./images/bar4.jpg", "Liquid Laboratory", "Hohhot, CHINA"],
+      ["./images/bar5.jpg", "夜香木 (Yakoboku)", "Kumamoto, JAPAN"],
+      ["./images/bar6.jpg", "Bar 黒の小枝", "Fukuoka, JAPAN"],
+      ["./images/bar7.jpg", "CAMELOT", "Dalian, CHINA"],
+      ["./images/bar8.jpg", "BAR坂本 (Bar Sakamoto)", "Fukuoka, JAPAN"],
+      ["./images/bar9.jpg", "FourSenses Nomad-Ability Cocktail Bar", "Ulaanbaatar, MONGOLIA"],
+      ["./images/bar10.jpg", "Night Cafe Casino", "Aizu-Wakamatsu, JAPAN"],
+      ["./images/bar11.jpg", "バー・アデニウム (BAR ADENIUM)", "Tokyo, JAPAN"]
     ];
 
-    const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
-    document.body.style.setProperty("--bg-image", "url('" + randomImage[0] + "')");
+    const captionLine1 = document.getElementById("bg-caption-line-1");
+    const captionLine2 = document.getElementById("bg-caption-line-2");
+    const bgLayerA = document.getElementById("bg-layer-a");
+    const bgLayerB = document.getElementById("bg-layer-b");
+
+    function setLayerImage(layer, entry) {
+      layer.style.setProperty("--bg-photo", "url('" + entry[0] + "')");
+    }
+
+    function setCaption(entry) {
+      captionLine1.textContent = entry[1];
+      captionLine2.textContent = entry[2];
+    }
+
+    let currentIndex = Math.floor(Math.random() * backgroundImages.length);
+    let isLayerAVisible = true;
+
+    setLayerImage(bgLayerA, backgroundImages[currentIndex]);
+    setLayerImage(bgLayerB, backgroundImages[currentIndex]);
+    setCaption(backgroundImages[currentIndex]);
+
+    setInterval(() => {
+      const nextIndex = (currentIndex + 1) % backgroundImages.length;
+      const nextEntry = backgroundImages[nextIndex];
+      const incomingLayer = isLayerAVisible ? bgLayerB : bgLayerA;
+      const outgoingLayer = isLayerAVisible ? bgLayerA : bgLayerB;
+
+      setLayerImage(incomingLayer, nextEntry);
+      incomingLayer.style.opacity = "1";
+      outgoingLayer.style.opacity = "0";
+      setCaption(nextEntry);
+
+      currentIndex = nextIndex;
+      isLayerAVisible = !isLayerAVisible;
+    }, 6767);
   </script>
 </body>
 </html>
