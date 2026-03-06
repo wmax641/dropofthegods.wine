@@ -132,68 +132,68 @@
     /* --- Responsive styles for mobile devices --- */
     @media (max-width: 700px) {
       body {
-        padding: 0.5rem;
+        padding: 1rem 0.8rem 2rem;
         box-sizing: border-box;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        font-size: 1.08rem;
-        line-height: 1.7;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.12rem;
+        line-height: 1.65;
       }
       .calculator {
         flex-direction: column;
-        width: 90vw;
+        width: min(100%, 42rem);
         min-width: unset;
-        max-width: 100vw;
-        padding: 1rem;
-        gap: 1.5rem;
+        max-width: 100%;
+        padding: 1.25rem;
+        gap: 1.75rem;
         box-sizing: border-box;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0;
+        margin-right: 0;
       }
       .inputs, .output {
         padding: 0;
-        width: 95%;
+        width: 100%;
       }
       .inputs h1, .output h1 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         font-weight: 700;
         line-height: 1.4;
       }
       .output h2 {
-        font-size: 1.1rem;
+        font-size: 1.18rem;
         font-weight: 600;
         line-height: 1.4;
       }
       h1.title {
-        font-size: 1.35rem;
+        font-size: clamp(1.65rem, 7vw, 1.95rem);
         font-weight: 700;
         line-height: 1.3;
       }
       p.description {
-        width: 98vw;
-        font-size: 1.08rem;
-        line-height: 1.7;
-        padding: 0 0.2rem;
+        width: min(100%, 42rem);
+        font-size: 1.12rem;
+        line-height: 1.65;
+        padding: 0;
       }
       input, select {
-        font-size: 1.08rem;
-        padding: 0.7rem;
+        font-size: 1.1rem;
+        padding: 0.8rem;
         line-height: 1.4;
       }
       #fruitSelect, #syrupSelect {
-        font-size: 0.95rem;
+        font-size: 1rem;
         margin-left: 0;
         width: 100%;
         line-height: 1.4;
       }
       .result-box {
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         font-weight: 600;
         padding: 1rem;
         line-height: 1.5;
       }
       .inputs label {
-        font-size: 1.05rem;
+        font-size: 1.08rem;
         font-weight: 600;
         line-height: 1.4;
       }
@@ -315,8 +315,8 @@
 </head>
 <body ng-controller="BrixController">
   <nav style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-    <a href="./brix.html" style="color: #1a120c; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; background: linear-gradient(135deg, rgb(252, 144, 3), rgb(255, 196, 115)); font-weight: 700;">Brix Calculator</a>
-    <a href="../recipes/cocktails.html" style="color: #ddd; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.04);">Cocktail Recipes</a>
+    <a href="./brix.html" style="color: #1a120c; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; background: linear-gradient(135deg, rgb(252, 144, 3), rgb(255, 196, 115)); font-weight: 700;">🧪 Brix Calculator</a>
+    <a href="../recipes/cocktails.html" style="color: #ddd; text-decoration: none; padding: 0.65rem 1rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.04);">🍹 Cocktail Recipes</a>
   </nav>
   <h1 class="title">🧪 Brix Syrup Calculator 🍯</h1>
   <p class="description">

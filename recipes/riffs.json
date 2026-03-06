@@ -43,8 +43,8 @@
     "ingredients": [
       { "amount": 45,   "unit": "mL", "ingredient": "umeshu" },
       { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
-      { "amount": 70,   "unit": "mL", "type": "Fever Tree", "ingredient": "ginger beer" },
-      { "amount": 20,   "unit": "mL", "ingredient": "soda" },
+      { "amount": 90,   "unit": "mL", "type": "Fever Tree", "ingredient": "ginger beer" },
+      { "amount": "?",   "unit": "mL", "ingredient": "soda" },
       { "amount": 30, "unit": "mL", "ingredient": "matcha🍵" }
     ],
     "method": [
