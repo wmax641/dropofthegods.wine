@@ -42,14 +42,14 @@
     "img": "images/kyoto_mule.jpg",
     "ingredients": [
       { "amount": 45,   "unit": "mL", "ingredient": "umeshu" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "matcha🍵" },
       { "amount": 15,   "unit": "mL", "ingredient": "lime juice" },
-      { "amount": 120,   "unit": "mL", "ingredient": "ginger beer" }
+      { "amount": 60,   "unit": "mL", "type": "Fever Tree", "ingredient": "ginger beer" },
+      { "amount": 30,   "unit": "mL", "ingredient": "soda" },
+      { "amount": 30, "unit": "mL", "ingredient": "matcha🍵" }
     ],
     "method": [
       "build",
-      "float matcha🍵 on top",
-      "large variance in sweetness of umeshu and ginger beer. Adjust as required, or replace some ginger beer with soda"
+      "large variance in sweetness of umeshu and ginger beer. Adjust ginger beer / soda ratio as required"
     ]
   },
   {
