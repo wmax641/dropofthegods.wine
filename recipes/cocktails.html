@@ -191,11 +191,11 @@
     .filter-help::after {
       content: attr(data-tooltip);
       position: absolute;
-      left: 50%;
+      left: 0;
       bottom: calc(100% + 0.55rem);
-      transform: translateX(-50%) translateY(0.2rem);
+      transform: translateY(0.2rem);
       min-width: 180px;
-      max-width: 240px;
+      max-width: min(240px, calc(100vw - 2rem));
       padding: 0.5rem 0.65rem;
       border-radius: 0.7rem;
       background: rgba(8, 8, 8, 0.92);
@@ -215,9 +215,9 @@
     .filter-help::before {
       content: "";
       position: absolute;
-      left: 50%;
+      left: 0.52rem;
       bottom: calc(100% + 0.22rem);
-      transform: translateX(-50%) translateY(0.2rem);
+      transform: translateY(0.2rem);
       border-width: 0.32rem;
       border-style: solid;
       border-color: rgba(8, 8, 8, 0.92) transparent transparent transparent;
@@ -227,12 +227,23 @@
       z-index: 6;
     }
 
+    .filter-help.tooltip-below::after {
+      top: calc(100% + 0.55rem);
+      bottom: auto;
+    }
+
+    .filter-help.tooltip-below::before {
+      top: calc(100% + 0.22rem);
+      bottom: auto;
+      border-color: transparent transparent rgba(8, 8, 8, 0.92) transparent;
+    }
+
     .filter-help:hover::after,
     .filter-help:hover::before,
     .filter-help:focus-visible::after,
     .filter-help:focus-visible::before {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0);
     }
 
     .filter-line {
@@ -572,7 +583,7 @@
       }
 
       .filters-content {
-        overflow: hidden;
+        overflow: visible;
         max-height: 38rem;
         opacity: 1;
         transform: translateY(0);
@@ -580,6 +591,7 @@
       }
 
       .filters.is-collapsed .filters-content {
+        overflow: hidden;
         max-height: 0;
         opacity: 0;
         transform: translateY(-0.35rem);
@@ -629,7 +641,7 @@
 <body>
   <main class="shell">
     <nav class="nav" aria-label="Site navigation">
-      <a href="../index.html" class="nav-main" aria-label="Main" title="Main">🩸</a>
+      <a href="../index.html" class="nav-main" aria-label="Main" title="Main">💧</a>
       <a href="../brix/brix.html">🧪 Brix Calculator</a>
       <a href="./cocktails.html" class="active">🍹 Cocktail Recipes</a>
     </nav>
@@ -787,6 +799,32 @@
       `;
     }
 
+    function estimateFilterTooltipHeight(helpEl) {
+      const tooltipText = helpEl.getAttribute("data-tooltip") || "";
+      const estimatedWidth = Math.min(240, Math.max(180, Math.ceil(tooltipText.length * 5.4)));
+      const charsPerLine = Math.max(24, Math.floor((estimatedWidth - 22) / 7));
+      const lines = Math.max(1, Math.ceil(tooltipText.length / charsPerLine));
+      return (lines * 16) + 24;
+    }
+
+    function updateFilterHelpTooltipPosition(helpEl) {
+      const rect = helpEl.getBoundingClientRect();
+      const tooltipHeight = estimateFilterTooltipHeight(helpEl);
+      const spaceAbove = rect.top;
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const shouldPlaceBelow = spaceAbove < (tooltipHeight + 12) && spaceBelow > spaceAbove;
+
+      helpEl.classList.toggle("tooltip-below", shouldPlaceBelow);
+    }
+
+    function refreshActiveFilterHelpTooltips() {
+      document.querySelectorAll(".filter-help").forEach((helpEl) => {
+        if (helpEl.matches(":hover, :focus-visible")) {
+          updateFilterHelpTooltipPosition(helpEl);
+        }
+      });
+    }
+
     function renderFilters(recipes) {
       filtersContent.innerHTML = [
         createFilterGroup("Style", "style", getUniqueValues(recipes, "style"), FILTER_HELP_TEXT.style),
@@ -899,8 +937,26 @@
       }
     });
 
+    filtersRoot.addEventListener("pointerover", (event) => {
+      const helpEl = event.target.closest(".filter-help");
+      if (!helpEl) {
+        return;
+      }
+      updateFilterHelpTooltipPosition(helpEl);
+    });
+
+    filtersRoot.addEventListener("focusin", (event) => {
+      const helpEl = event.target.closest(".filter-help");
+      if (!helpEl) {
+        return;
+      }
+      updateFilterHelpTooltipPosition(helpEl);
+    });
+
     mobileFiltersQuery.addEventListener("change", syncFiltersForViewport);
     window.addEventListener("scroll", collapseMobileFiltersOnScroll, { passive: true });
+    window.addEventListener("scroll", refreshActiveFilterHelpTooltips, { passive: true });
+    window.addEventListener("resize", refreshActiveFilterHelpTooltips);
     syncFiltersForViewport();
 
     const RECIPE_SOURCES = ["./classics.json", "./dropofthegods.json", "./riffs.json"];

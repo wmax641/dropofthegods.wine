@@ -21,7 +21,8 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
+      min-height: 100dvh;
+      height: 100dvh;
       display: grid;
       justify-items: center;
       align-content: start;
@@ -29,6 +30,7 @@
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
       color: var(--text);
       background-color: #120b07;
+      overflow: hidden;
     }
 
 
@@ -58,11 +60,11 @@
 
     .panel {
       width: min(550px, 100%);
-      padding: 3rem;
+      padding: 2.0rem;
       border-radius: 1.25rem;
       position: relative;
       border: 0;
-      background: rgba(20, 13, 9, 0.15);
+      background: rgba(20, 13, 9, 0.10);
       overflow: hidden;
       z-index: 67;
     }
@@ -116,8 +118,8 @@
     a:hover {
       transform: translateY(-2px);
       border-color: var(--accent);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .bg-caption {
@@ -125,8 +127,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 2.0rem 1.25rem 1.0rem;
-      background: linear-gradient(to top, rgba(8, 6, 5, 0.88) 0%, rgba(8, 6, 5, 0.62) 52%, rgba(8, 6, 5, 0) 100%);
+      padding: 2.5rem 1.25rem 1.0rem;
+      background: linear-gradient(to top, rgba(8, 6, 5, 0.8) 0%, rgba(8, 6, 5, 0.67) 67%, rgba(8, 6, 5, 0) 100%);
       pointer-events: auto;
       user-select: text;
       z-index: 2;
@@ -160,7 +162,7 @@
   <div class="bg-layer bg-layer--a" id="bg-layer-a" aria-hidden="true"></div>
   <div class="bg-layer bg-layer--b" id="bg-layer-b" aria-hidden="true"></div>
   <main class="panel">
-    <h1>🍷 Drop of the Gods 🩸</h1>
+    <h1>🍷 Drop of the Gods</h1>
     <nav class="links">
       <a href="./recipes/cocktails.html">🍹 Cocktail Recipes</a>
       <a href="./brix/brix.html">🧪 Brix Calculator</a>
