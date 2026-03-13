@@ -89,6 +89,40 @@
     ]
   },
   {
+    "name": "Martini (Dirty)",
+    "style": "Martini",
+    "base": "Gin",
+    "category": "Classics",
+    "img": "images/dirty_martini.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "type": "Tanqueray", "ingredient": "gin" },
+      { "amount": 20,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
+      { "amount": 15,   "unit": "mL", "ingredient": "olive brine" }
+    ],
+    "method": [
+      "gin should be frozen",
+      "stir - for longer than usual if using frozen gin",
+      "express lemon🍋 zest"
+    ]
+  },
+  {
+    "name": "Naked and Famous",
+    "style": "Sidecar",
+    "base": "Tequila",
+    "category": "Classics",
+    "img": "images/naked_and_famous.jpg",
+    "ingredients": [
+      { "amount": 30,   "unit": "mL", "ingredient": "mezcal" },
+      { "amount": 15,   "unit": "mL", "type": "Aperol" },
+      { "amount": 15,   "unit": "mL", "type": "Yellow Chartreuse" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" }
+    ],
+    "method": [
+      "shake",
+      "express orange🍊 peel"
+    ]
+  },
+  {
     "name": "Sidecar",
     "style": "Sidecar",
     "base": "Brandy",
