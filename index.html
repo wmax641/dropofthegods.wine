@@ -12,7 +12,7 @@
       --card-border: rgba(255, 255, 255, 0.18);
       --text: #f8ecdf;
       --muted: #d6bda6;
-      --accent: #ff9a3d;
+      --accent: #885533;
     }
 
     * {
@@ -127,7 +127,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 3.0rem 1.25rem 1.0rem;
+      padding: 3.2rem 1.25rem 1.0rem;
       background: linear-gradient(to top, rgba(8, 6, 5, 0.8) 0%, rgba(8, 6, 5, 0.67) 67%, rgba(8, 6, 5, 0) 100%);
       pointer-events: auto;
       user-select: text;
@@ -139,6 +139,38 @@
       margin: 0 auto;
     }
 
+    .bg-dots {
+      position: fixed;
+      left: 50%;
+      bottom: 8.75rem;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 0 1.25rem 0.1rem;
+      z-index: 3;
+    }
+
+    .bg-dot {
+      width: 0.35rem;
+      height: 0.35rem;
+      border: 0;
+      border-radius: 999px;
+      padding: 0;
+      background: rgba(248, 236, 223, 0.2);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .bg-dot.is-active {
+      background: var(--accent);
+      transform: scale(1.15);
+      box-shadow: 0 0 0 1px rgba(255, 154, 61, 0.45), 0 0 18px rgba(255, 154, 61, 0.45);
+    }
+
     .bg-caption h2,
     .bg-caption p {
       margin: 0;
@@ -146,7 +178,7 @@
     }
 
     .bg-caption h2 {
-      font-size: clamp(1.67rem, 2.1vw, 1.35rem);
+      font-size: clamp(1.57rem, 2.1vw, 1.35rem);
       color: var(--text);
       font-weight: 700;
     }
@@ -154,7 +186,7 @@
     .bg-caption p {
       margin-top: 0.35rem;
       color: var(--muted);
-      font-size: clamp(1.1rem, 1.6vw, 1.05rem);
+      font-size: clamp(1.0rem, 1.6vw, 1.05rem);
     }
   </style>
 </head>
@@ -174,6 +206,7 @@
       <p id="bg-caption-line-2"></p>
     </div>
   </section>
+  <div class="bg-dots" id="bg-dots" aria-hidden="true"></div>
   <script>
     const backgroundImages = [
       ["./images/bar0.jpg", "バー・ファロ (Bar FARO)", "Niigata, JAPAN"],
@@ -197,6 +230,7 @@
     const captionLine2 = document.getElementById("bg-caption-line-2");
     const bgLayerA = document.getElementById("bg-layer-a");
     const bgLayerB = document.getElementById("bg-layer-b");
+    const bgDots = document.getElementById("bg-dots");
 
     function setLayerImage(layer, entry) {
       layer.style.setProperty("--bg-photo", "url('" + entry[0] + "')");
@@ -207,12 +241,19 @@
       captionLine2.textContent = entry[2];
     }
 
+    function renderDots(activeIndex) {
+      bgDots.innerHTML = backgroundImages.map((_, index) => `
+        <span class="bg-dot${index === activeIndex ? " is-active" : ""}" aria-hidden="true"></span>
+      `).join("");
+    }
+
     let currentIndex = Math.floor(Math.random() * backgroundImages.length);
     let isLayerAVisible = true;
 
     setLayerImage(bgLayerA, backgroundImages[currentIndex]);
     setLayerImage(bgLayerB, backgroundImages[currentIndex]);
     setCaption(backgroundImages[currentIndex]);
+    renderDots(currentIndex);
 
     setInterval(() => {
       const nextIndex = (currentIndex + 1) % backgroundImages.length;
@@ -224,6 +265,7 @@
       incomingLayer.style.opacity = "1";
       outgoingLayer.style.opacity = "0";
       setCaption(nextEntry);
+      renderDots(nextIndex);
 
       currentIndex = nextIndex;
       isLayerAVisible = !isLayerAVisible;
