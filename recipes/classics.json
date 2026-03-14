@@ -96,8 +96,8 @@
     "img": "images/dirty_martini.jpg",
     "ingredients": [
       { "amount": 45,   "unit": "mL", "type": "Tanqueray", "ingredient": "gin" },
-      { "amount": 20,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
-      { "amount": 15,   "unit": "mL", "ingredient": "olive brine" }
+      { "amount": 15,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
+      { "amount": 10,   "unit": "mL", "ingredient": "olive brine" }
     ],
     "method": [
       "gin should be frozen",
@@ -112,10 +112,10 @@
     "category": "Classics",
     "img": "images/naked_and_famous.jpg",
     "ingredients": [
-      { "amount": 30,   "unit": "mL", "ingredient": "mezcal" },
-      { "amount": 15,   "unit": "mL", "type": "Aperol" },
-      { "amount": 15,   "unit": "mL", "type": "Yellow Chartreuse" },
-      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" }
+      { "amount": 30,    "unit": "mL", "ingredient": "mezcal" },
+      { "amount": 17.5,  "unit": "mL", "type": "Aperol" },
+      { "amount": 17.5,  "unit": "mL", "type": "Yellow Chartreuse" },
+      { "amount": 17.5,  "unit": "mL", "ingredient": "lime juice" }
     ],
     "method": [
       "shake",
@@ -135,7 +135,7 @@
       { "amount": 5 ,   "unit": "mL", "ingredient": "simple syrup" }
     ],
     "method": [
-      "shake with slice of orange🍊",
+      "regal shake with slice of orange🍊",
       "express orange🍊 peel",
       "(if using sugar rim, don't add sugar syrup)"
     ]
@@ -153,9 +153,9 @@
     "method": [
       "add whisky and half ice, stir",
       "add the rest of the ice",
-      "add soda",
-      "using barspoon, smoothly lift ice up from bottom a few times to mix",
-      "(optional) express lemon🍋 zest"
+      "add soda, avoid pouring on the ice",
+      "using barspoon, smoothly lift ice a few times to mix",
+      "(optional) express orange🍊 zest"
     ]
   }
 ]
