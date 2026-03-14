@@ -12,7 +12,7 @@
       --card-border: rgba(255, 255, 255, 0.18);
       --text: #f8ecdf;
       --muted: #d6bda6;
-      --accent: #885533;
+      --accent: #774422;
     }
 
     * {
@@ -147,7 +147,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.55rem;
+      gap: 0.8rem;
       width: min(1100px, 100%);
       margin: 0 auto;
       padding: 0 1.25rem 0.1rem;
@@ -155,20 +155,28 @@
     }
 
     .bg-dot {
-      width: 0.35rem;
-      height: 0.35rem;
+      width: 0.5rem;
+      height: 0.5rem;
       border: 0;
       border-radius: 999px;
       padding: 0;
-      background: rgba(248, 236, 223, 0.2);
+      cursor: pointer;
+      background: rgba(248, 236, 223, 0.4);
       box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
       transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+      -webkit-appearance: none;
+      appearance: none;
     }
 
     .bg-dot.is-active {
       background: var(--accent);
       transform: scale(1.15);
       box-shadow: 0 0 0 1px rgba(255, 154, 61, 0.45), 0 0 18px rgba(255, 154, 61, 0.45);
+    }
+
+    .bg-dot:focus-visible {
+      outline: 2px solid rgba(255, 154, 61, 0.9);
+      outline-offset: 0.2rem;
     }
 
     .bg-caption h2,
@@ -206,7 +214,7 @@
       <p id="bg-caption-line-2"></p>
     </div>
   </section>
-  <div class="bg-dots" id="bg-dots" aria-hidden="true"></div>
+  <div class="bg-dots" id="bg-dots" aria-label="Background image navigation"></div>
   <script>
     const backgroundImages = [
       ["./images/bar0.jpg", "バー・ファロ (Bar FARO)", "Niigata, JAPAN"],
@@ -243,20 +251,16 @@
 
     function renderDots(activeIndex) {
       bgDots.innerHTML = backgroundImages.map((_, index) => `
-        <span class="bg-dot${index === activeIndex ? " is-active" : ""}" aria-hidden="true"></span>
+        <button
+          type="button"
+          class="bg-dot${index === activeIndex ? " is-active" : ""}"
+          aria-label="Show background image ${index + 1}"
+          aria-pressed="${index === activeIndex ? "true" : "false"}"
+        ></button>
       `).join("");
     }
 
-    let currentIndex = Math.floor(Math.random() * backgroundImages.length);
-    let isLayerAVisible = true;
-
-    setLayerImage(bgLayerA, backgroundImages[currentIndex]);
-    setLayerImage(bgLayerB, backgroundImages[currentIndex]);
-    setCaption(backgroundImages[currentIndex]);
-    renderDots(currentIndex);
-
-    setInterval(() => {
-      const nextIndex = (currentIndex + 1) % backgroundImages.length;
+    function showImage(nextIndex) {
       const nextEntry = backgroundImages[nextIndex];
       const incomingLayer = isLayerAVisible ? bgLayerB : bgLayerA;
       const outgoingLayer = isLayerAVisible ? bgLayerA : bgLayerB;
@@ -269,7 +273,49 @@
 
       currentIndex = nextIndex;
       isLayerAVisible = !isLayerAVisible;
-    }, 8888);
+    }
+
+    const slideIntervalMs = 8888;
+    let slideTimerId = null;
+
+    function restartSlideTimer() {
+      if (slideTimerId !== null) {
+        clearInterval(slideTimerId);
+      }
+
+      slideTimerId = setInterval(() => {
+        const nextIndex = (currentIndex + 1) % backgroundImages.length;
+        showImage(nextIndex);
+      }, slideIntervalMs);
+    }
+
+    let currentIndex = Math.floor(Math.random() * backgroundImages.length);
+    let isLayerAVisible = true;
+
+    setLayerImage(bgLayerA, backgroundImages[currentIndex]);
+    setLayerImage(bgLayerB, backgroundImages[currentIndex]);
+    setCaption(backgroundImages[currentIndex]);
+    renderDots(currentIndex);
+    restartSlideTimer();
+
+    bgDots.addEventListener("click", (event) => {
+      const dot = event.target.closest(".bg-dot");
+
+      if (!dot) {
+        return;
+      }
+
+      const dots = Array.from(bgDots.querySelectorAll(".bg-dot"));
+      const nextIndex = dots.indexOf(dot);
+
+      if (nextIndex === -1 || nextIndex === currentIndex) {
+        restartSlideTimer();
+        return;
+      }
+
+      showImage(nextIndex);
+      restartSlideTimer();
+    });
   </script>
 </body>
 </html>
