@@ -19,6 +19,27 @@
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
   {
+    "name": "Edison's Medicine",
+    "style": "Sidecar",
+    "base": "Rum",
+    "category": "Riffs",
+    "img": "images/edisons_medicine.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "cahacha" },
+      { "amount": 7.5,   "unit": "mL", "type": "Green Chartreuse" },
+      { "amount": 5,   "unit": "mL", "type": "DOM Benedictine" },
+      { "amount": 5, "unit": "mL", "ingredient": "agave nectar" },
+      { "amount": 20,  "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 5,    "unit": "leaves", "ingredient": "basil" }
+    ],
+    "method": [
+      "shake, fine strain",
+      "shake with ice",
+      "(if using Monin Agave Syrup, use about 10mL)"
+    ],
+    "notes": "Concept originally from 'The Bedford ', Chicago"
+  },
+  {
     "name": "Elderflower Gimlet",
     "style": "Sidecar",
     "base": "Gin",

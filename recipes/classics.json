@@ -35,7 +35,7 @@
     "img": "images/chrysanthemum.jpg",
     "ingredients": [
       { "amount": 50,   "unit": "mL", "ingredient": "dry vermouth" },
-      { "amount": 15,   "unit": "mL", "type": "DOM Benedictine", "ingredient": "" },
+      { "amount": 15,   "unit": "mL", "type": "DOM Benedictine"},
       { "amount": 2.5,  "unit": "mL", "ingredient": "absinthe" }
     ],
     "method": ["stir", "express orange🍊 peel"]
