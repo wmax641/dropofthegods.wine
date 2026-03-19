@@ -35,8 +35,8 @@
     "img": "images/cosmopolitan.jpg",
     "ingredients": [
       { "amount": 30,   "unit": "mL", "ingredient": "vodka" },
-      { "amount": 20,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec"},
-      { "amount": 10,  "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 15,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec"},
+      { "amount": 15,  "unit": "mL", "ingredient": "lime juice" },
       { "amount": 20,  "unit": "mL", "ingredient": "cranberry juice" }
     ],
     "method": [
