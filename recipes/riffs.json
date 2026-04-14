@@ -1,6 +1,6 @@
 [
   {
-    "name": "Banana Alexander",
+    "name": "Banana Mascarpone Alexander",
     "style": "Alexander",
     "base": "Brandy",
     "category": "Riffs",
@@ -8,16 +8,41 @@
     "ingredients": [
       { "amount": 25,   "unit": "mL", "ingredient": "brandy" },
       { "amount": 25,   "unit": "mL", "ingredient": "creme de cacao" },
-      { "amount": 12.5, "unit": "mL", "ingredient": "milk" },
+      { "amount": 25,   "unit": "mL", "ingredient": "milk" },
       { "amount": 0.5,  "unit": "of a", "ingredient": "banana" },
       { "amount": 1,    "unit": "spoon", "ingredient": "mascarpone" }
     ],
     "method": [
-      "blend the ingredients",
-      "shake with ice"
+      "quick blend all ingredients except mascarpone",
+      "add mascarpone, and quick blend just to mix",
+      "shake with ice",
+      "(overblending will result in undesirable thick consistency)"
     ],
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
+
+  {
+    "name": "Banana Coffee Alexander",
+    "style": "Alexander",
+    "base": "Rum",
+    "category": "Riffs",
+    "img": "images/banana_coffee_alexander.jpg",
+    "ingredients": [
+      { "amount": 25,   "unit": "mL", "ingredient": "rum" },
+      { "amount": 25,   "unit": "mL", "type": "Mr Black", "ingredient": "coffee liqueur" },
+      { "amount": 25,   "unit": "mL", "ingredient": "milk" },
+      { "amount": 0.5,  "unit": "of a", "ingredient": "banana" },
+      { "amount": 25,   "unit": "mL", "ingredient": "cream" }
+    ],
+    "method": [
+      "quick blend all ingredients except cream",
+      "add cream, and quick blend just to mix",
+      "shake with ice",
+      "(overblending will result in undesirable thick consistency)"
+    ],
+    "notes": "Concept originally from 'Bar FARO', Niigata"
+  },
+
   {
     "name": "Edison's Medicine",
     "style": "Sidecar",

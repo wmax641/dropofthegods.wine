@@ -76,6 +76,27 @@
   },
 
   {
+    "name": "Passionate Lychee Martini",
+    "style": "Sidecar",
+    "base": "Vodka",
+    "category": "Drop of the Gods",
+    "img": "images/lychee_passionfruit_martini.jpg",
+    "ingredients": [
+      { "amount": 20,   "unit": "mL", "type": "Jasmine Tea Infused", "ingredient": "vodka" },
+      { "amount": 20,   "unit": "mL", "ingredient": "yuzu sake (yuzushu)" },
+      { "amount": 10,   "unit": "mL", "ingredient": "lychee liqueur" },
+      { "amount": 20,   "unit": "mL", "ingredient": "lychee juice </b>or <b>30</b> mL <b>lychee puree</b>" },
+      { "amount": 20,   "unit": "mL", "ingredient": "passionfruit puree" },
+      { "amount": "?",  "unit": "mL", "ingredient": "lemon juice 🍋" }
+    ],
+    "method": [
+      "<b>Jasmine Tea Infused Vodka</b><br>500 mL Vodka<br>10 g Jasmine Tea<br>cold infuse 12-24 hours",
+      "large variance sourness of yuzu sake and passionfruit<br>lemon juice 🍋 optional to adjust balance (0-5mL)"
+    ],
+    "notes": "Concept originally from 'The Malaya', Sydney"
+  },
+
+  {
     "name": "Mezcal Paloma",
     "style": "Highball",
     "base": "Tequila",
@@ -84,7 +105,7 @@
     "ingredients": [
       { "amount": 35,   "unit": "mL", "ingredient": "mezcal" },
       { "amount": 35,   "unit": "mL", "ingredient": "Citrus and Rosmary shrub" },
-      { "amount": 5,    "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 5,    "unit": "mL", "ingredient": "lime juice 🍋‍🟩" },
       "top up with Soda, about 1:1 ratio of cocktail:soda"
     ],
     "method": [
@@ -92,6 +113,24 @@
       "Day 1: Oleo/macerate sugar, citrus peel and rosemary for 1 day<br>Day 2: add the other ingredients<br>Infuse for 3-5 more days"
     ],
     "notes": "Concept originally from 'Bar Flying Bumblebee', Tokyo"
+  },
+
+  {
+    "name": "Tonka Truck",
+    "style": "Sour",
+    "base": "Other",
+    "category": "Drop of the Gods",
+    "img": "images/tonka_truck.jpg",
+    "ingredients": [
+      { "amount": 15,   "unit": "mL", "ingredient": "absinthe" },
+      { "amount": 50, "unit": "mL", "ingredient": "orange juice 🍊" },
+      { "amount": 15, "unit": "mL", "ingredient": "Tonka Bean and Vanilla Syrup" },
+      { "amount": 10, "unit": "mL", "ingredient": "lemon juice 🍋" }
+    ],
+    "method": [
+      "<b>Tonka Bean and Vanilla Syrup</b><br>100 mL Water<br>100 g Sugar<br>2 Tonka Beans, grated<br>10mL Vanilla Extract<br>Combine above ingredients with heat. Don't boil/burn<br>Infuse 1 hour"
+    ],
+    "notes": "Concept originally from 'Bar Trench', Toyko"
   },
 
   {
