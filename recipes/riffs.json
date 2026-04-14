@@ -30,8 +30,8 @@
     "ingredients": [
       { "amount": 25,   "unit": "mL", "ingredient": "rum" },
       { "amount": 25,   "unit": "mL", "type": "Mr Black", "ingredient": "coffee liqueur" },
-      { "amount": 25,   "unit": "mL", "ingredient": "milk" },
       { "amount": 0.5,  "unit": "of a", "ingredient": "banana" },
+      { "amount": 25,   "unit": "mL", "ingredient": "milk" },
       { "amount": 25,   "unit": "mL", "ingredient": "cream" }
     ],
     "method": [
