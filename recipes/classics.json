@@ -22,8 +22,8 @@
     "img": "images/alexander.jpg",
     "ingredients": [
       { "amount": 25,   "unit": "mL", "ingredient": "brandy" },
-      { "amount": 25,   "unit": "mL", "ingredient": "creme de cacao" },
-      { "amount": 30,   "unit": "mL", "ingredient": "cream" }
+      { "amount": 25,   "unit": "mL", "type": "Tempus Fugit", "ingredient": "creme de cacao" },
+      { "amount": 40,   "unit": "mL", "ingredient": "cream" }
     ],
     "method": ["shake", "double strain"]
   },
@@ -56,6 +56,19 @@
       { "amount": 2.5,  "unit": "mL", "ingredient": "absinthe" }
     ],
     "method": ["stir", "express orange🍊 peel"]
+  },
+  {
+    "name": "Daiquiri",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Classics",
+    "img": "images/daiquiri.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL", "ingredient": "white rum" },
+      { "amount": 25,   "unit": "mL", "ingredient": "lime juice"},
+      { "amount": 18,  "unit": "mL", "ingredient": "simple syrup" }
+    ],
+    "method": ["shake", "express lime 🍋‍🟩 zest"]
   },
   {
     "name": "Manhattan",
