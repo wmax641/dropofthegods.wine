@@ -173,7 +173,7 @@
   {
     "name": "Tom Collins",
     "style": "Highball",
-    "base": "Whisky",
+    "base": "Gin",
     "category": "Classics",
     "img": "images/tom_collins.jpg",
     "ingredients": [
