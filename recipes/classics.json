@@ -171,6 +171,27 @@
     ]
   },
   {
+    "name": "Tom Collins",
+    "style": "Highball",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/tom_collins.jpg",
+    "ingredients": [
+      { "amount": 60,  "unit": "mL", "ingredient": "gin" },
+      { "amount": 20,   "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 7.5, "unit": "g", "ingredient": "sugar"},
+      { "amount": 60,  "unit": "mL", "ingredient": "soda water"}
+    ],
+    "method": [
+      "add ingredients to shaker (except soda), stir to disolve sugar",
+      "shake double strain",
+      "add ice",
+      "add soda, avoid pouring on the ice",
+      "(optional) express lemon🍋 zest",
+      "(Use sugar instead of simple syrup to avoid dilution)"
+    ]
+  },
+  {
     "name": "Whisky Highball",
     "style": "Highball",
     "base": "Whisky",
