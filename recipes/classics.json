@@ -166,9 +166,8 @@
       { "amount": 5,  "unit": "mL", "ingredient": "absinthe" }
     ],
     "method": [
-      "stir absinthe and ice in glass to chill and coat with absinthe",
-      "pour absinthe out, optionally save for a shot 🥃",
-      "stir other ingredients with ice. Can re-use the absinthe ice",
+      "rinse glass with absinthe. discard (save for an absinthe shot)",
+      "stir other ingredients with ice",
       "express lemon🍋 zest. Optionally drop into drink"
     ]
   },
@@ -197,7 +196,7 @@
     "category": "Classics",
     "img": "images/tom_collins.jpg",
     "ingredients": [
-      { "amount": 60,  "unit": "mL", "ingredient": "gin" },
+      { "amount": 50,  "unit": "mL", "ingredient": "gin" },
       { "amount": 20,   "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 7.5, "unit": "g", "ingredient": "sugar"},
       { "amount": 60,  "unit": "mL", "ingredient": "soda water"}
