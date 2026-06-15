@@ -165,5 +165,25 @@
       "stir",
       "float coconut water matcha🍵"],
     "notes": "Original cocktail by Takuma Watanabe from Martiny's, New York"
+  },
+  {
+    "name": "Umeshu Sour",
+    "style": "Sour",
+    "base": "Other",
+    "category": "Riffs",
+    "img" : "images/umeshu_sour.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL",  "ingredient": "umeshu" },
+      { "amount": 15,   "unit": "mL",  "ingredient": "scotch whisky" },
+      { "amount": 10,   "unit": "mL",  "ingredient": "simple syrup" },
+      { "amount": 7.5,  "unit": "mL",  "ingredient": "lemon juice" },
+      { "amount": 7.5,  "unit": "mL",  "ingredient": "yuzu juice" },
+      { "amount": 10,   "unit": "mL",  "ingredient": "egg white 🥚" }
+    ],
+    "method": [
+      "shake",
+      "less peaty scotch is preferred. Otherwise bourbon",
+      "large variance in balance of umeshu. Adjust as required"
+    ]
   }
 ]

@@ -153,6 +153,26 @@
     ]
   },
   {
+    "name": "Sazerac",
+    "style": "Old Fashioned",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/sazerac.jpg",
+    "ingredients": [
+      { "amount": 30, "unit": "mL", "type": "rye", "ingredient": "whisky" },
+      { "amount": 20, "unit": "mL", "type": "cognac", "ingredient": "brandy" },
+      { "amount": 10, "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 3,  "unit": "dash", "type": "Angostura", "ingredient": "bitters" },
+      { "amount": 5,  "unit": "mL", "ingredient": "absinthe" }
+    ],
+    "method": [
+      "stir absinthe and ice in glass to chill and coat with absinthe",
+      "pour absinthe out, optionally save for a shot 🥃",
+      "stir other ingredients with ice. Can re-use the absinthe ice",
+      "express lemon🍋 zest. Optionally drop into drink"
+    ]
+  },
+  {
     "name": "Sidecar",
     "style": "Sidecar",
     "base": "Brandy",
