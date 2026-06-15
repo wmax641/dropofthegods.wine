@@ -161,8 +161,8 @@
     "ingredients": [
       { "amount": 30, "unit": "mL", "type": "rye", "ingredient": "whisky" },
       { "amount": 20, "unit": "mL", "type": "cognac", "ingredient": "brandy" },
-      { "amount": 10, "unit": "mL", "ingredient": "simple syrup" },
-      { "amount": 3,  "unit": "dash", "type": "Angostura", "ingredient": "bitters" },
+      { "amount": 7.5, "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 2,  "unit": "dash", "type": "Angostura", "ingredient": "bitters" },
       { "amount": 5,  "unit": "mL", "ingredient": "absinthe" }
     ],
     "method": [
