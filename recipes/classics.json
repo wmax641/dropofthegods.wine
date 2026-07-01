@@ -16,6 +16,7 @@
       "express lemon🍋 peel"
     ]
   },
+
   {
     "name": "Brandy Alexander",
     "style": "Alexander",
@@ -29,6 +30,7 @@
     ],
     "method": ["shake", "double strain"]
   },
+
   {
     "name": "Cosmopolitan",
     "style": "Sidecar",
@@ -46,6 +48,7 @@
       "express orange🍊 peel"
     ]
   },
+
   {
     "name": "Chrysanthemum",
     "style": "Martini",
@@ -59,6 +62,7 @@
     ],
     "method": ["stir", "express orange🍊 peel"]
   },
+
   {
     "name": "Daiquiri",
     "style": "Sour",
@@ -72,6 +76,7 @@
     ],
     "method": ["shake", "express lime 🍋‍🟩 zest"]
   },
+
   {
     "name": "Manhattan",
     "style": "Martini",
@@ -101,6 +106,7 @@
       "thin salt rim"
     ]
   },
+
   {
     "name": "Margarita (preferred)",
     "style": "Sour",
@@ -120,6 +126,7 @@
       "(if using Monin Agave Syrup, use about 15mL)"
     ]
   },
+
   {
     "name": "Martini (Dirty)",
     "style": "Martini",
@@ -137,6 +144,7 @@
       "express lemon🍋 zest"
     ]
   },
+
   {
     "name": "Naked and Famous",
     "style": "Sidecar",
@@ -154,6 +162,7 @@
       "express orange🍊 peel"
     ]
   },
+
   {
     "name": "Sazerac",
     "style": "Old Fashioned",
@@ -173,6 +182,7 @@
       "express lemon🍋 zest. Optionally drop into drink"
     ]
   },
+
   {
     "name": "Sidecar",
     "style": "Sidecar",
@@ -191,6 +201,7 @@
       "(if using sugar rim, can add less sugar/syrup)"
     ]
   },
+
   {
     "name": "Tom Collins",
     "style": "Highball",
@@ -212,6 +223,7 @@
       "(Use sugar instead of simple syrup to avoid dilution)"
     ]
   },
+
   {
     "name": "Whisky Highball",
     "style": "Highball",
