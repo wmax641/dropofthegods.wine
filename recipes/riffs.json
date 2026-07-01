@@ -44,6 +44,22 @@
   },
 
   {
+    "name": "Bloody Gin and Tonic",
+    "style": "Highball",
+    "base": "Gin",
+    "category": "Riffs",
+    "img": "images/bloody_gt.jpg",
+    "ingredients": [
+      { "amount": 40,  "unit": "mL", "type": "Four Pillars Bloody Shiraz", "ingredient": "gin" },
+      { "amount": 10,  "unit": "mL", "type": "Tempus Fugit Gran Classico", "ingredient": "aperitivo" },
+      { "amount": 150, "unit": "mL", "type": "Fever Tree", "ingredient": "tonic" }
+    ],
+    "method": [
+      "build"
+    ]
+  },
+
+  {
     "name": "Edison's Medicine",
     "style": "Sidecar",
     "base": "Rum",
@@ -173,12 +189,12 @@
     "category": "Riffs",
     "img" : "images/umeshu_sour.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL",  "ingredient": "umeshu" },
-      { "amount": 15,   "unit": "mL",  "ingredient": "scotch whisky" },
-      { "amount": 10,   "unit": "mL",  "ingredient": "simple syrup" },
-      { "amount": 7.5,  "unit": "mL",  "ingredient": "lemon juice" },
-      { "amount": 7.5,  "unit": "mL",  "ingredient": "yuzu juice" },
-      { "amount": 10,   "unit": "mL",  "ingredient": "egg white 🥚" }
+      { "amount": 45,  "unit": "mL",  "ingredient": "umeshu" },
+      { "amount": 15,  "unit": "mL",  "ingredient": "scotch whisky" },
+      { "amount": 10,  "unit": "mL",  "ingredient": "simple syrup" },
+      { "amount": 5,   "unit": "mL",  "ingredient": "lemon juice" },
+      { "amount": 5,   "unit": "mL",  "ingredient": "yuzu juice" },
+      { "amount": 10,  "unit": "mL",  "ingredient": "egg white 🥚" }
     ],
     "method": [
       "shake",

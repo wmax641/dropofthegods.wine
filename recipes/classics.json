@@ -1,18 +1,20 @@
 [
   {
-    "name": "Armaretto Sour",
-    "style": "Sour",
-    "base": "Other",
+    "name": "20th Century Cocktail",
+    "style": "Sidecar",
+    "base": "Gin",
     "category": "Classics",
+    "img": "images/20th_century.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "amaretto" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "bourbon" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
-      { "amount": 5,    "unit": "mL", "ingredient": "simple syrup" },
-      "egg white"
+      { "amount": 45, "unit": "mL", "ingredient": "gin" },
+      { "amount": 15, "unit": "mL", "type": "Tempus Fugit", "ingredient": "creme de cacao" },
+      { "amount": 15, "unit": "mL", "type": "Lillet Blanc" },
+      { "amount": 15, "unit": "mL", "ingredient": "lemon juice" }
     ],
-    "method": ["shake", "double strain"],
-    "notes": "Morgenthaler's amaretto sour"
+    "method": [
+      "shake",
+      "express lemon🍋 peel"
+    ]
   },
   {
     "name": "Brandy Alexander",
@@ -37,7 +39,7 @@
       { "amount": 30,   "unit": "mL", "ingredient": "vodka" },
       { "amount": 15,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec"},
       { "amount": 15,  "unit": "mL", "ingredient": "lime juice" },
-      { "amount": 20,  "unit": "mL", "ingredient": "cranberry juice" }
+      { "amount": "10-20",  "unit": "mL", "ingredient": "cranberry juice" }
     ],
     "method": [
       "shake",
@@ -108,12 +110,12 @@
     "ingredients": [
       { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
       { "amount": 10,   "unit": "mL", "ingredient": "agave nectar" },
-      { "amount": 25,   "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 30,   "unit": "mL", "ingredient": "lime juice" },
       "orange peel"
     ],
     "method": [
-      "regal shake with orange peel",
-      "thin salt rim",
+      "regal shake with small orange peel",
+      "salt rim",
       "express orange🍊 peel",
       "(if using Monin Agave Syrup, use about 15mL)"
     ]
