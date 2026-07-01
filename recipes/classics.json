@@ -180,15 +180,15 @@
     "category": "Classics",
     "img": "images/sidecar.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "brandy" },
-      { "amount": 22.5, "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "lemon juice" },
-      { "amount": 5 ,   "unit": "mL", "ingredient": "simple syrup" }
+      { "amount": 45,  "unit": "mL", "ingredient": "brandy" },
+      { "amount": 15,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
+      { "amount": 15,  "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 4 ,  "unit": "g", "ingredient": "sugar" }
     ],
     "method": [
-      "regal shake with slice of orange🍊",
+      "could use 7.5mL sugar syrup instead of sugar",
       "express orange🍊 peel",
-      "(if using sugar rim, don't add sugar syrup)"
+      "(if using sugar rim, can add less sugar/syrup)"
     ]
   },
   {
