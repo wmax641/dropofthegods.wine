@@ -67,7 +67,7 @@
     "img": "images/bloody_gt.jpg",
     "ingredients": [
       { "amount": 40,  "unit": "mL", "type": "Four Pillars Bloody Shiraz", "ingredient": "gin" },
-      { "amount": 10,  "unit": "mL", "type": "Tempus Fugit Gran Classico", "ingredient": "aperitivo" },
+      { "amount": 10,  "unit": "mL", "type": "Tempus Fugit Gran Classico", "ingredient": "bitter aperitivo" },
       { "amount": 150, "unit": "mL", "type": "Fever Tree", "ingredient": "tonic" }
     ],
     "method": [
