@@ -78,6 +78,21 @@
   },
 
   {
+    "name": "French Martini",
+    "style": "Sidecar",
+    "base": "Vodka",
+    "category": "Classics",
+    "img": "images/french_martini.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "Vodka" },
+      { "amount": 22.5, "unit": "mL", "type": "Chambord"},
+      { "amount": 45,   "unit": "mL", "ingredient": "pineapple juice" }
+    ],
+    "method": ["shake", "double strain"],
+    "notes": "pictured cocktail uses homemade chambord with real fruit, hence the deep colour"
+  },
+
+  {
     "name": "Manhattan",
     "style": "Martini",
     "base": "Whisky",

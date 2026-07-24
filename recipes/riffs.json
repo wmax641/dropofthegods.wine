@@ -1,5 +1,21 @@
 [
   {
+    "name": "Apple Whisky",
+    "style": "Highball",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/apple_whisky.jpg",
+    "ingredients": [
+      { "amount": 40,  "unit": "mL", "ingredient": "whisky" },
+      { "amount": 120, "unit": "mL", "ingredient": "cloudy green apple juice" }
+    ],
+    "method": [
+      "build"
+    ],
+    "notes": "Concept originally Baxter Inn, Sydney"
+  },
+
+  {
     "name": "Banana Mascarpone Alexander",
     "style": "Alexander",
     "base": "Brandy",
@@ -96,6 +112,25 @@
       "shake"
     ]
   },
+
+  {
+    "name": "Hemmingway Special Daiquiri",
+    "style": "Sidecar",
+    "base": "Rum",
+    "category": "Riffs",
+    "img": "images/hemmingway_daiquiri.jpg",
+    "ingredients": [
+      { "amount": 45,   "unit": "mL", "ingredient": "white rum" },
+      { "amount": 10,   "unit": "mL", "type": "Luxardo Maraschino Liqueur" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 15,   "unit": "mL", "ingredient": "grapefruit juice" },
+      { "amount": 15,   "unit": "mL", "ingredient": "simple syrup" }
+    ],
+    "method": [
+      "shake"
+    ]
+  },
+
   {
     "name": "Kyoto Mule",
     "style": "Highball",
