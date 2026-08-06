@@ -29,10 +29,8 @@
       { "amount": 1,    "unit": "spoon", "ingredient": "mascarpone" }
     ],
     "method": [
-      "quick blend all ingredients except mascarpone",
-      "add mascarpone, and quick blend just to mix",
-      "shake with ice",
-      "(overblending will result in undesirable thick consistency)"
+      "quick blend all ingredients",
+      "shake with ice"
     ],
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
@@ -51,10 +49,8 @@
       { "amount": 25,   "unit": "mL", "ingredient": "cream" }
     ],
     "method": [
-      "quick blend all ingredients except cream",
-      "add cream, and quick blend just to mix",
-      "shake with ice",
-      "(overblending will result in undesirable thick consistency)"
+      "quick blend all ingredients",
+      "shake with ice"
     ],
     "notes": "Concept originally from 'Bar FARO', Niigata"
   },
