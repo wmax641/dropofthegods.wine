@@ -3,11 +3,11 @@
     "name": "Apple Whisky",
     "style": "Highball",
     "base": "Whisky",
-    "category": "Classics",
+    "category": "Riffs",
     "img": "images/apple_whisky.jpg",
     "ingredients": [
       { "amount": 40,  "unit": "mL", "ingredient": "whisky" },
-      { "amount": 120, "unit": "mL", "ingredient": "cloudy green apple juice" }
+      { "amount": 150, "unit": "mL", "ingredient": "cloudy green apple juice" }
     ],
     "method": [
       "build"
