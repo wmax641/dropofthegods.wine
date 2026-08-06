@@ -93,6 +93,21 @@
   },
 
   {
+    "name": "Japanese Slipper",
+    "style": "Sidecar",
+    "base": "Other",
+    "category": "Classics",
+    "img": "images/japanese_slipper.jpg",
+    "ingredients": [
+      { "amount": 10,   "unit": "mL", "ingredient": "vodka" },
+      { "amount": 25,   "unit": "mL", "type": "Midori", "ingredient": "melon liqueur" },
+      { "amount": 25,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
+      { "amount": 25,   "unit": "mL", "ingredient": "lemon juice" }
+    ],
+    "method": ["shake"]
+  },
+
+  {
     "name": "Manhattan",
     "style": "Martini",
     "base": "Whisky",
