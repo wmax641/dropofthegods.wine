@@ -38,14 +38,16 @@
     "category": "Classics",
     "img": "images/cosmopolitan.jpg",
     "ingredients": [
-      { "amount": 30,   "unit": "mL", "ingredient": "vodka" },
-      { "amount": 15,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec"},
+      { "amount": 30,  "unit": "mL", "ingredient": "vodka" },
+      { "amount": 20,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec"},
       { "amount": 15,  "unit": "mL", "ingredient": "lime juice" },
-      { "amount": "10-20",  "unit": "mL", "ingredient": "cranberry juice" }
+      { "amount": 5,  "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": "20-30",  "unit": "mL", "ingredient": "cranberry \"<i>drink</i>\"" }
     ],
     "method": [
       "shake",
-      "express orange🍊 peel"
+      "express orange🍊 peel",
+      "if using real cranberry \"<b>juice</b>\"; 10mL juice, 10mL simple syrup"
     ]
   },
 
@@ -70,11 +72,17 @@
     "category": "Classics",
     "img": "images/daiquiri.jpg",
     "ingredients": [
-      { "amount": 50,   "unit": "mL", "ingredient": "white rum" },
-      { "amount": 25,   "unit": "mL", "ingredient": "lime juice"},
-      { "amount": 18,  "unit": "mL", "ingredient": "simple syrup" }
+      { "amount": 50,  "unit": "mL", "ingredient": "white rum" },
+      { "amount": 25,  "unit": "mL", "ingredient": "lime juice"},
+      { "amount": 7.5, "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 5,   "unit": "g",  "type": "granulated", "ingredient": "sugar" }
     ],
-    "method": ["shake", "express lime 🍋‍🟩 zest"]
+    "method": [
+      "stir to disolve sugar",
+      "shake",
+      "express lime 🍋‍🟩 zest",
+      "use 17.5mL simple syrup if not using granulated sugar"
+    ]
   },
 
   {
@@ -89,7 +97,7 @@
       { "amount": 45,   "unit": "mL", "ingredient": "pineapple juice" }
     ],
     "method": ["shake", "double strain"],
-    "notes": "pictured cocktail uses homemade chambord with real fruit, hence the deep colour"
+    "notes": "pictured cocktail uses homemade chambord"
   },
 
   {
