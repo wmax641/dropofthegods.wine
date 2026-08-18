@@ -193,7 +193,7 @@
     "img": "images/old_fashioned.jpg",
     "ingredients": [
       { "amount": 60, "unit": "mL",   "ingredient": "whisky" },
-      { "amount": 10, "unit": "mL",   "ingredient": "simple syrup" },
+      { "amount": 10, "unit": "mL",   "type": "demerara", "ingredient": "simple syrup" },
       { "amount": 2,  "unit": "dash", "type": "Angostura", "ingredient": "aromatic bitters" },
       { "amount": 2,  "unit": "dash", "type": "Angostura", "ingredient": "orange bitters" }
     ],
