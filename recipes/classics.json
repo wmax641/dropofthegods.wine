@@ -128,33 +128,17 @@
     ],
     "method": ["stir", "express orange🍊 peel"]
   },
-  {
-    "name": "Margarita",
-    "style": "Sidecar",
-    "base": "Tequila",
-    "category": "Classics",
-    "img": "images/margarita.jpg",
-    "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "tequila" },
-      { "amount": 22.5, "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 22.5, "unit": "mL", "ingredient": "lime juice" }
-    ],
-    "method": [
-      "shake",
-      "thin salt rim"
-    ]
-  },
 
   {
-    "name": "Margarita (preferred)",
+    "name": "Margarita",
     "style": "Sour",
     "base": "Tequila",
     "category": "Classics",
     "img": "images/margarita.jpg",
     "ingredients": [
       { "amount": 50,   "unit": "mL", "ingredient": "tequila" },
-      { "amount": 10,   "unit": "mL", "ingredient": "agave nectar" },
-      { "amount": 30,   "unit": "mL", "ingredient": "lime juice" },
+      { "amount": 7.5,  "unit": "mL", "ingredient": "agave nectar" },
+      { "amount": 25,   "unit": "mL", "ingredient": "lime juice" },
       "orange peel"
     ],
     "method": [
@@ -197,6 +181,25 @@
     ],
     "method": [
       "shake",
+      "express orange🍊 peel"
+    ]
+  },
+
+  {
+    "name": "Old Fashioned",
+    "style": "Old Fashioned",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/old_fashioned.jpg",
+    "ingredients": [
+      { "amount": 60, "unit": "mL",   "ingredient": "whisky" },
+      { "amount": 10, "unit": "mL",   "ingredient": "simple syrup" },
+      { "amount": 2,  "unit": "dash", "ingredient": "aromatic bitters" },
+      { "amount": 2,  "unit": "dash", "ingredient": "orange bitters" }
+    ],
+
+    "method": [
+      "stir",
       "express orange🍊 peel"
     ]
   },

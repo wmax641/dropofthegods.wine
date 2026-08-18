@@ -129,4 +129,3 @@ introduced.
 - Be careful with viewport height and `overflow: hidden` on mobile pages
 - Keep comments brief and useful; do not comment trivial lines
 - Prefer maximum line width of 100 characters where practical
-

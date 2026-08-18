@@ -198,7 +198,7 @@
   },
   {
     "name": "Tea Ceremony",
-    "style": "Old-Fashioned",
+    "style": "Old Fashioned",
     "base": "Whisky",
     "category": "Riffs",
     "img" : "images/tea_ceremony.jpg",
