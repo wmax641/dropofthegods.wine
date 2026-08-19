@@ -156,13 +156,12 @@
     "category": "Classics",
     "img": "images/dirty_martini.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "type": "Tanqueray", "ingredient": "gin" },
-      { "amount": 15,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
-      { "amount": 10,   "unit": "mL", "ingredient": "olive brine" }
+      { "amount": 60,   "unit": "mL", "type": "Tanqueray", "ingredient": "gin" },
+      { "amount": 20,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
+      { "amount": 12.5, "unit": "mL", "ingredient": "olive brine" }
     ],
     "method": [
-      "gin should be frozen",
-      "stir - for longer than usual if using frozen gin",
+      "gin should be frozen ❄️, stir - for longer",
       "express lemon🍋 zest"
     ]
   },
@@ -233,7 +232,7 @@
       { "amount": 45,  "unit": "mL", "ingredient": "brandy" },
       { "amount": 15,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
       { "amount": 15,  "unit": "mL", "ingredient": "lemon juice" },
-      { "amount": 4 ,  "unit": "g", "ingredient": "sugar" }
+      { "amount": 3 ,  "unit": "g", "ingredient": "sugar" }
     ],
     "method": [
       "could use 7.5mL sugar syrup instead of sugar",
