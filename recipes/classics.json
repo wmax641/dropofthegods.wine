@@ -101,6 +101,25 @@
   },
 
   {
+    "name": "Hot Toddy",
+    "style": "Old Fashioned",
+    "base": "Whisky",
+    "category": "Classics",
+    "img": "images/hot_toddy.jpg",
+    "ingredients": [
+      { "amount": 50,  "unit": "mL", "ingredient": "whisky" },
+      { "amount": 20,  "unit": "mL", "ingredient": "honey syrup"},
+      { "amount": 10,  "unit": "mL", "ingredient": "lemon juice"},
+      { "amount": 100, "unit": "mL", "ingredient": "boiling water"},
+      { "amount": "6-7", "ingredient": "cloves" }
+    ],
+    "method": [
+      "build, give a quick stir",
+      "<b>Honey Syrup</b><br>3:1 honey🍯 to hot water by weight"
+    ]
+  },
+
+  {
     "name": "Japanese Slipper",
     "style": "Sidecar",
     "base": "Other",
