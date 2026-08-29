@@ -13,7 +13,7 @@
     ],
     "method": [
       "shake",
-      "express lemon🍋 peel"
+      "express lemon🍋 zest"
     ]
   },
 
@@ -46,7 +46,7 @@
     ],
     "method": [
       "shake",
-      "express orange🍊 peel",
+      "express orange🍊 zest",
       "if using real cranberry \"<b>juice</b>\"; 10mL juice, 10mL simple syrup"
     ]
   },
@@ -62,7 +62,7 @@
       { "amount": 15,   "unit": "mL", "type": "DOM Benedictine"},
       { "amount": 2.5,  "unit": "mL", "ingredient": "absinthe" }
     ],
-    "method": ["stir", "express orange🍊 peel"]
+    "method": ["stir", "express orange🍊 zest"]
   },
 
   {
@@ -75,7 +75,7 @@
       { "amount": 50,  "unit": "mL", "ingredient": "white rum" },
       { "amount": 25,  "unit": "mL", "ingredient": "lime juice"},
       { "amount": 7.5, "unit": "mL", "ingredient": "simple syrup" },
-      { "amount": 5,   "unit": "g",  "type": "granulated", "ingredient": "sugar" }
+      { "amount": 5,   "unit": "g",  "ingredient": "sugar" }
     ],
     "method": [
       "stir to disolve sugar",
@@ -86,14 +86,31 @@
   },
 
   {
+    "name": "French 75",
+    "style": "Sour",
+    "base": "Gin",
+    "category": "Classics",
+    "img": "images/french_75.jpg",
+    "ingredients": [
+      { "amount": 45,  "unit": "mL", "ingredient": "gin" },
+      { "amount": 20,  "unit": "mL", "ingredient": "lemon juice"},
+      { "amount": 10,  "unit": "mL", "ingredient": "simple syrup" },
+      { "amount": 5,   "unit": "g",  "ingredient": "sugar" },
+      { "divider": true },
+      { "amount": 75,  "unit": "mL", "ingredient": "sparkling wine" }
+    ],
+    "method": ["stir ingredients except for sparkling wine", "shake", "double strain", "top up with sparkling wine🍾", "express lemon🍋 zest"]
+  },
+
+  {
     "name": "French Martini",
     "style": "Sidecar",
     "base": "Vodka",
     "category": "Classics",
     "img": "images/french_martini.jpg",
     "ingredients": [
-      { "amount": 45,   "unit": "mL", "ingredient": "Vodka" },
-      { "amount": 22.5, "unit": "mL", "type": "Chambord"},
+      { "amount": 45,   "unit": "mL", "ingredient": "vodka" },
+      { "amount": 22.5, "unit": "mL", "ingredient": "berry liqueur"},
       { "amount": 45,   "unit": "mL", "ingredient": "pineapple juice" }
     ],
     "method": ["shake", "double strain"],
@@ -146,7 +163,7 @@
       { "amount": 25,   "unit": "mL", "type": "Antica Formula","ingredient": "sweet vermouth" },
       { "amount": 1,    "unit": "dash", "type": "Angostura", "ingredient": "bitters" }
     ],
-    "method": ["stir", "express orange🍊 peel"]
+    "method": ["stir", "express orange🍊 zest"]
   },
 
   {
@@ -205,6 +222,32 @@
   },
 
   {
+    "name": "Old Cuban",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Classics",
+    "img": "images/old_cuban.jpg",
+    "ingredients": [
+      { "amount": 45, "unit": "mL",  "ingredient": "dark rum" },
+      { "amount": 20, "unit": "mL",  "ingredient": "lime juice" },
+      { "amount": 10, "unit": "mL",  "ingredient": "demerara syrup" },
+      { "amount": 5,  "unit": "g",   "ingredient": "sugar" },
+      { "amount": 2,  "unit": "dash", "type": "Angostura", "ingredient": "aromatic bitters" },
+      { "amount": "6-7", "unit": "leaves", "ingredient": "mint" },
+      { "divider": true },
+      { "amount": 75, "unit": "mL", "ingredient": "sparkling wine" }
+    ],
+    "method": [
+      "muddle mint leaves and sugar",
+      "add other ingredients, except sparkling wine",
+      "stir, then dry shake",
+      "strain mint leaves",
+      "shake, double strain",
+      "top up with sparkling wine🍾"
+    ]
+  },
+
+  {
     "name": "Old Fashioned",
     "style": "Old Fashioned",
     "base": "Whisky",
@@ -250,14 +293,14 @@
     "img": "images/sidecar.jpg",
     "ingredients": [
       { "amount": 45,  "unit": "mL", "ingredient": "brandy" },
-      { "amount": 15,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 15,  "unit": "mL", "ingredient": "lemon juice" },
-      { "amount": 3 ,  "unit": "g", "ingredient": "sugar" }
+      { "amount": 20,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
+      { "amount": 20,  "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 3.5 ,"unit": "g",  "ingredient": "sugar" }
     ],
     "method": [
       "could use 7.5mL sugar syrup instead of sugar",
       "express orange🍊 peel",
-      "(if using sugar rim, can add less sugar/syrup)"
+      "(optional) thin sugar rim"
     ]
   },
 
@@ -271,15 +314,15 @@
       { "amount": 50,  "unit": "mL", "ingredient": "gin" },
       { "amount": 20,   "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 7.5, "unit": "g", "ingredient": "sugar"},
-      { "amount": 60,  "unit": "mL", "ingredient": "soda water"}
+      { "divider": true },
+      { "amount": 70,  "unit": "mL", "ingredient": "soda water"}
     ],
     "method": [
       "add ingredients to shaker (except soda), stir to disolve sugar",
       "shake double strain",
       "add ice",
-      "add soda, avoid pouring on the ice",
-      "(optional) express lemon🍋 zest",
-      "(Use sugar instead of simple syrup to avoid dilution)"
+      "add soda, roughly 1:1 ratio",
+      "express lemon🍋 zest"
     ]
   },
 
@@ -291,7 +334,8 @@
     "img": "images/whisky_highball.jpg",
     "ingredients": [
       { "amount": 45,   "unit": "mL", "ingredient": "whisky" },
-      { "amount": 90,   "unit": "mL", "ingredient": "soda water" }
+      { "divider": true },
+      { "amount": 135,   "unit": "mL", "ingredient": "soda water" }
     ],
     "method": [
       "add whisky and half ice, stir",

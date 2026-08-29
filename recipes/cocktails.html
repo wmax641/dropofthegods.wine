@@ -557,6 +557,14 @@
       padding-left: 1.1rem;
     }
 
+    .ingredient-divider {
+      height: 1px;
+      margin: 0.15rem 6rem 0.15rem -0.5rem;
+      padding: 0;
+      background: rgba(255, 214, 168, 0.2);
+      list-style: none;
+    }
+
     .footer-note {
       margin-top: 1.5rem;
       color: var(--muted);
@@ -714,6 +722,14 @@
       const typeText = item.type ? `<i>${item.type}</i>` : "";
       const ingredientText = item.ingredient ? `<b>${item.ingredient}</b>` : "";
       return [amountText, item.unit, typeText, ingredientText].filter(Boolean).join(" ");
+    }
+
+    function renderIngredientListItem(item) {
+      if (item && typeof item === "object" && item.divider === true) {
+        return `<li class="ingredient-divider" aria-hidden="true"></li>`;
+      }
+
+      return `<li>${renderIngredient(item)}</li>`;
     }
 
     function renderTitle(recipe, className = "") {
@@ -911,7 +927,9 @@
           `}
           <div>
             <span class="section-title">Ingredients</span>
-            <ul>${recipe.ingredients.map((item) => `<li>${renderIngredient(item)}</li>`).join("")}</ul>
+            <ul class="ingredients-list">
+              ${recipe.ingredients.map(renderIngredientListItem).join("")}
+            </ul>
           </div>
           <div>
             <span class="section-title">Method</span>

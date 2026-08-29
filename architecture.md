@@ -63,15 +63,17 @@ Expected recipe fields:
   "category": "Classics",
   "img": "images/example.jpg",
   "ingredients": [
-    { "amount": 45, "unit": "mL", "type": "Optional descriptor", "ingredient": "gin" }
+    { "amount": 45, "unit": "mL", "type": "Optional descriptor", "ingredient": "gin" },
+    { "divider": true }
   ],
   "method": ["shake", "double strain"],
   "notes": "Optional note"
 }
 ```
 
-`ingredients` may contain structured objects or plain strings. `method` entries may contain
-simple HTML markup such as `<b>` and `<br>`, so treat the JSON files as trusted site content.
+`ingredients` may contain structured objects, plain strings, or `{ "divider": true }` to
+render a horizontal line between ingredient groups. `method` entries may contain simple HTML
+markup such as `<b>` and `<br>`, so treat the JSON files as trusted site content.
 
 When adding recipes:
 
