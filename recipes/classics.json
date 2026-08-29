@@ -24,8 +24,8 @@
     "category": "Classics",
     "img": "images/alexander.jpg",
     "ingredients": [
-      { "amount": 25,   "unit": "mL", "ingredient": "brandy" },
-      { "amount": 25,   "unit": "mL", "type": "Tempus Fugit", "ingredient": "creme de cacao" },
+      { "amount": 30,   "unit": "mL", "ingredient": "brandy" },
+      { "amount": 30,   "unit": "mL", "type": "Tempus Fugit", "ingredient": "creme de cacao" },
       { "amount": 40,   "unit": "mL", "ingredient": "cream" }
     ],
     "method": ["shake", "double strain"]
