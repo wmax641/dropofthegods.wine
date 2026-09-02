@@ -153,6 +153,21 @@
   },
 
   {
+    "name": "Last Word",
+    "style": "Sidecar",
+    "base": "Gin",
+    "category": "Classics",
+    "img": "images/last_word.jpg",
+    "ingredients": [
+      { "amount": 30,   "unit": "mL", "ingredient": "vodka" },
+      { "amount": 15,   "unit": "mL", "type": "Green Chartreuse", "ingredient": "melon liqueur" },
+      { "amount": 15,   "unit": "mL", "type": "Luxardo", "ingredient": "maraschino" },
+      { "amount": 15,   "unit": "mL", "ingredient": "lime juice" }
+    ],
+    "method": ["shake", "express lime 🍋‍🟩 zest"]
+  },
+
+  {
     "name": "Manhattan",
     "style": "Martini",
     "base": "Whisky",
@@ -210,10 +225,10 @@
     "category": "Classics",
     "img": "images/naked_and_famous.jpg",
     "ingredients": [
-      { "amount": 30,    "unit": "mL", "ingredient": "mezcal" },
-      { "amount": 17.5,  "unit": "mL", "type": "Aperol" },
-      { "amount": 17.5,  "unit": "mL", "type": "Yellow Chartreuse" },
-      { "amount": 17.5,  "unit": "mL", "ingredient": "lime juice" }
+      { "amount": 30,  "unit": "mL", "ingredient": "mezcal" },
+      { "amount": 15,  "unit": "mL", "type": "Aperol" },
+      { "amount": 15,  "unit": "mL", "type": "Yellow Chartreuse" },
+      { "amount": 15,  "unit": "mL", "ingredient": "lime juice" }
     ],
     "method": [
       "shake",
