@@ -92,6 +92,7 @@
     ],
     "notes": "Concept originally from 'The Bedford ', Chicago"
   },
+
   {
     "name": "Elderflower Gimlet",
     "style": "Sidecar",
@@ -106,6 +107,28 @@
     ],
     "method": [
       "shake"
+    ]
+  },
+
+  {
+    "name": "Frozen Strawberry Daiquiri",
+    "style": "Sour",
+    "base": "Rum",
+    "category": "Riffs",
+    "img": "images/frozen_strawberry_daiquiri.jpg",
+    "ingredients": [
+      { "amount": 50,   "unit": "mL",     "ingredient": "cahacha" },
+      { "amount": 30,   "unit": "mL",     "ingredient": "lime juice" },
+      { "amount": 15,   "unit": "g",      "ingredient": "sugar" },
+      { "amount": "6-7","unit": "leaves", "ingredient": "mint" },
+      { "divider": true },
+      { "amount": 100,  "unit": "g", "ingredient": "strawberry 🍓 (4-5 strawberries)" },
+      { "amount": 100,  "unit": "g", "ingredient": "ice (4-5 ice cubes)" }
+    ],
+    "method": [
+      "mix liquids, sugar and mint<br>muddle until sugar disolves<br>remove half of the mint (blended mint is bitter)",
+      "blend with ice and strawberries for about 20 sec",
+      "coarse strain (larger ice chunks)"
     ]
   },
 

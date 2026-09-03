@@ -159,7 +159,7 @@
     "category": "Classics",
     "img": "images/last_word.jpg",
     "ingredients": [
-      { "amount": 30,   "unit": "mL", "ingredient": "vodka" },
+      { "amount": 30,   "unit": "mL", "ingredient": "gin" },
       { "amount": 15,   "unit": "mL", "type": "Green Chartreuse", "ingredient": "melon liqueur" },
       { "amount": 15,   "unit": "mL", "type": "Luxardo", "ingredient": "maraschino" },
       { "amount": 15,   "unit": "mL", "ingredient": "lime juice" }
