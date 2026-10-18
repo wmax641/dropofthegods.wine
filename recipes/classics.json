@@ -138,21 +138,6 @@
   },
 
   {
-    "name": "Japanese Slipper",
-    "style": "Sidecar",
-    "base": "Other",
-    "category": "Classics",
-    "img": "images/japanese_slipper.jpg",
-    "ingredients": [
-      { "amount": 10,   "unit": "mL", "ingredient": "vodka" },
-      { "amount": 25,   "unit": "mL", "type": "Midori", "ingredient": "melon liqueur" },
-      { "amount": 25,   "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 25,   "unit": "mL", "ingredient": "lemon juice" }
-    ],
-    "method": ["shake"]
-  },
-
-  {
     "name": "Last Word",
     "style": "Sidecar",
     "base": "Gin",
@@ -161,7 +146,7 @@
     "ingredients": [
       { "amount": 30,   "unit": "mL", "ingredient": "gin" },
       { "amount": 15,   "unit": "mL", "type": "Green Chartreuse" },
-      { "amount": 15,   "unit": "mL", "type": "Luxardo", "ingredient": "maraschino" },
+      { "amount": 15,   "unit": "mL", "type": "Luxardo", "ingredient": "maraschino liqueur" },
       { "amount": 15,   "unit": "mL", "ingredient": "lime juice" }
     ],
     "method": ["shake", "express lime 🍋‍🟩 zest"]
@@ -175,8 +160,9 @@
     "img": "images/manhattan.jpg",
     "ingredients": [
       { "amount": 50,   "unit": "mL", "type": "rye", "ingredient": "whisky" },
-      { "amount": 25,   "unit": "mL", "type": "Antica Formula","ingredient": "sweet vermouth" },
-      { "amount": 1,    "unit": "dash", "type": "Angostura", "ingredient": "bitters" }
+      { "amount": 12.5, "unit": "mL", "type": "Antica Formula","ingredient": "sweet vermouth" },
+      { "amount": 12.5, "unit": "mL", "type": "Dolin Rouge","ingredient": "sweet vermouth" },
+      { "amount": 2,    "unit": "dash", "type": "Angostura", "ingredient": "bitters" }
     ],
     "method": ["stir", "express orange🍊 zest"]
   },
@@ -202,18 +188,21 @@
   },
 
   {
-    "name": "Martini (Dirty)",
+    "name": "Martini",
     "style": "Martini",
     "base": "Gin",
     "category": "Classics",
     "img": "images/dirty_martini.jpg",
     "ingredients": [
-      { "amount": 60,   "unit": "mL", "type": "Tanqueray", "ingredient": "gin" },
-      { "amount": 20,   "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
-      { "amount": 12.5, "unit": "mL", "ingredient": "olive brine" }
+      { "amount": 60, "unit": "mL", "type": "Tanqueray TEN", "ingredient": "gin" },
+      { "amount": 20, "unit": "mL", "type": "Dolin", "ingredient": "dry vermouth" },
+      { "amount": 1,  "unit": "dash", "ingredient": "orange bitters" },
+      { "divider": true },
+      { "amount": 12.5, "unit": "mL", "ingredient": "olive brine 🫒" }
     ],
     "method": [
-      "gin should be frozen ❄️, stir - for longer",
+      "stir",
+      "for frozen ❄️ gin, add 10mL water",
       "express lemon🍋 zest"
     ]
   },
@@ -246,7 +235,7 @@
       { "amount": 45, "unit": "mL",  "ingredient": "dark rum" },
       { "amount": 20, "unit": "mL",  "ingredient": "lime juice" },
       { "amount": 10, "unit": "mL",  "ingredient": "demerara syrup" },
-      { "amount": 5,  "unit": "g",   "ingredient": "sugar" },
+      { "amount": 5,  "unit": "g",   "ingredient": "demerara sugar" },
       { "amount": 2,  "unit": "dash", "type": "Angostura", "ingredient": "aromatic bitters" },
       { "amount": "6-7", "unit": "leaves", "ingredient": "mint" },
       { "divider": true },
@@ -308,12 +297,12 @@
     "img": "images/sidecar.jpg",
     "ingredients": [
       { "amount": 45,  "unit": "mL", "ingredient": "brandy" },
-      { "amount": 20,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 20,  "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 15,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
+      { "amount": 15,  "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 3.5 ,"unit": "g",  "ingredient": "sugar" }
     ],
     "method": [
-      "could use 7.5mL sugar syrup instead of sugar",
+      "use about 7.5mL sugar syrup instead of sugar",
       "express orange🍊 peel",
       "(optional) thin sugar rim"
     ]
@@ -330,13 +319,12 @@
       { "amount": 20,   "unit": "mL", "ingredient": "lemon juice" },
       { "amount": 7.5, "unit": "g", "ingredient": "sugar"},
       { "divider": true },
-      { "amount": 70,  "unit": "mL", "ingredient": "soda water"}
+      { "amount": 90,  "unit": "mL", "ingredient": "soda water"}
     ],
     "method": [
-      "add ingredients to shaker (except soda), stir to disolve sugar",
+      "stir ingredients (except soda) to disolve sugar",
       "shake double strain",
-      "add ice",
-      "add soda, roughly 1:1 ratio",
+      "add soda",
       "express lemon🍋 zest"
     ]
   },
@@ -353,6 +341,7 @@
       { "amount": 135,   "unit": "mL", "ingredient": "soda water" }
     ],
     "method": [
+      "1:2.5",
       "add whisky and half ice, stir",
       "add the rest of the ice",
       "add soda, avoid pouring on the ice",
