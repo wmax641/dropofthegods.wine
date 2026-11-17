@@ -296,15 +296,15 @@
     "category": "Classics",
     "img": "images/sidecar.jpg",
     "ingredients": [
-      { "amount": 45,  "unit": "mL", "ingredient": "brandy" },
-      { "amount": 15,  "unit": "mL", "type": "Cointreau", "ingredient": "triple sec" },
-      { "amount": 15,  "unit": "mL", "ingredient": "lemon juice" },
-      { "amount": 3.5 ,"unit": "g",  "ingredient": "sugar" }
+      { "amount": 40,  "unit": "mL", "ingredient": "cognac" },
+      { "amount": 20,  "unit": "mL", "type": "Pierre Ferrand", "ingredient": "dry curacao" },
+      { "amount": 20,  "unit": "mL", "ingredient": "lemon juice" },
+      { "amount": 3.5 ,"unit": "g",  "ingredient": "demerara sugar" }
     ],
     "method": [
       "use about 7.5mL sugar syrup instead of sugar",
-      "express orange🍊 peel",
-      "(optional) thin sugar rim"
+      "(use less sugar/syrup if using sweeter triple sec like Cointreau)",
+      "express orange🍊 peel"
     ]
   },
 
